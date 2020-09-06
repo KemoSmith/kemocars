@@ -1,0 +1,20 @@
+/*
+custom scrollbar
+ */
+*::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.2);
+    width: 5px;
+}
+*::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.2);
+    height: 5px;
+}
+
+
+*::-webkit-scrollbar-thumb:horizontal {
+    background: linear-gradient(90deg,#ff0055, rgb(1, 170, 255));
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+    background: linear-gradient(#ff0055, rgb(1, 170, 255));
+}
