@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class VehicleStoreRequest extends FormRequest
+class VehicleUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -47,8 +47,8 @@ class VehicleStoreRequest extends FormRequest
             "price" => 'required|numeric|max:1000000000',
             "images" => 'array|max:30',
             "images.*" => 'required|image',
-            "show_ci" => 'array',
-            "show_ci.*" => 'integer|exists:contact_infos,id'
+            "delete_image" => 'array|max:30',
+            "delete_image.*" => 'required|integer',
         ];
     }
 }

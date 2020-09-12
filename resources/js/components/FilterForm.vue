@@ -1,5 +1,5 @@
 <template>
-	<div id="v-filter-form" class="sticky-top">
+	<v-card outlined id="v-filter-form" class="sticky-top">
 		<v-toolbar flat dense color="white" class="sticky-top">
 			<v-icon color="blue">mdi-filter</v-icon>
 			<h3 class="m-0 font-weight-light">Filter</h3>
@@ -170,7 +170,7 @@
 				<v-img @click="filterByLogo('make','Suzuki')" aspect-ratio="1.5" :src="`${url}/images/suzuki_logo.png`" contain style="cursor: pointer;"></v-img>
 			</div>
 		</form>
-	</div>
+	</v-card>
 </template>
 
 <script>
@@ -179,7 +179,6 @@ export default {
 	props: ["url", "requestAll"],
 	mounted() {
 		this.request = JSON.parse(this.requestAll);
-		console.log(this.request.make);
 		this.make = this.request.make;
 	},
 	data: () => ({

@@ -4,11 +4,14 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require("./bootstrap");
 import Vuetify from "vuetify";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
 import VehicleFrom from "./store/modules/vehicleForm";
+import User from "./store/modules/user";
+import { ValidationProvider } from "vee-validate";
+import "./validation";
+require("./bootstrap");
 
 window.Vue = require("vue");
 
@@ -18,7 +21,8 @@ Vue.use(VueRouter);
 
 const store = new Vuex.Store({
     modules: {
-        VehicleFrom
+        VehicleFrom,
+        User
     }
 });
 
@@ -56,12 +60,31 @@ Vue.component(
 Vue.component("vehicle-form", require("./components/VehicleForm.vue").default);
 Vue.component("vehicle-card", require("./components/VehicleCard.vue").default);
 Vue.component("custom-footer", require("./components/Footer.vue").default);
+Vue.component(
+    "user-settings",
+    require("./components/UserSettings.vue").default
+);
+Vue.component(
+    "user-avatar-menu",
+    require("./components/UserAvatarMenu.vue").default
+);
+Vue.component(
+    "vehicle-types-n-shapes",
+    require("./components/VehicleTypesNShapes.vue").default
+);
+Vue.component("advert-div", require("./components/AdvertDiv.vue").default);
+Vue.component("login-button", require("./components/LoginButton.vue").default);
+
+Vue.component("ValidationProvider", ValidationProvider);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+axios.defaults.withCredentials = true;
+axios.defaults.baseURL = "http://kemocars.test";
 
 const app = new Vue({
     store,

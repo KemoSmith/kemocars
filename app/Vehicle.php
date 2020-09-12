@@ -17,4 +17,9 @@ class Vehicle extends Model
     {
         return $this->morphMany('App\Image', 'imageable');
     }
+
+    public function contact_info()
+    {
+        return $this->belongsToMany(ContactInfo::class);
+    }
 }

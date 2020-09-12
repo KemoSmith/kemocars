@@ -2,7 +2,7 @@
 	<div id="sticky-slider" class="sticky-top" style="z-index: 10;">
 		<v-img
 			v-if="imageObjects.length > 0"
-			:aspect-ratio="16/9"
+			:aspect-ratio="3/2"
 			class="grey darken-3"
 			:src="imageObjects[selectedImageIndex].path"
 		></v-img>
@@ -14,7 +14,7 @@
 				:key="i"
 				@click="selectedImageIndex = i"
 			>
-				<v-img :aspect-ratio="16/9" class="grey darken-3" :src="imageObject.path"></v-img>
+				<v-img :aspect-ratio="3/2" class="grey darken-3" :src="imageObject.path"></v-img>
 			</v-card>
 		</div>
 	</div>
@@ -36,7 +36,7 @@ export default {
 
 <style>
 #sticky-slider {
-	top: 84px;
+	top: 74px;
 }
 #image-select {
 	overflow-x: auto;

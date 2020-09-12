@@ -1,7 +1,7 @@
 /*
 custom scrollbar
  */
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
     background: rgba(0, 0, 0, 0.2);
     width: 5px;
 }
@@ -17,4 +17,4 @@ custom scrollbar
 
 *::-webkit-scrollbar-thumb:vertical {
     background: linear-gradient(#ff0055, rgb(1, 170, 255));
-}
+} */

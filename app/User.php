@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function vehicle(){
         return $this->hasMany(Vehicle::class);
     }
+
+    public function contact_info(){
+        return $this->hasMany(ContactInfo::class);
+    }
 }
