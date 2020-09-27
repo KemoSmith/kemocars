@@ -1,7 +1,5 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
+@extends('layouts.new_app') @section('content')
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -66,5 +64,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<form id="main-login-form" method="POST" action="{{ route('login') }}">
+    @csrf
+    <cs-login-form></cs-login-form>
+</form>
 @endsection

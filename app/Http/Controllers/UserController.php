@@ -30,6 +30,14 @@ class UserController extends Controller
             }
         }
 
+        foreach (auth()->user()->contact_info as $ci) {
+            $delete_ci = true;
+            if ($request->contact_info) foreach ($request->contact_info as $contact_info) {
+                if ($ci->info == $contact_info['info'] && $ci->type == $contact_info['type']) $delete_ci = false;
+            }
+            if ($delete_ci) $ci->delete();
+        }
+
         if ($request->contact_info) foreach ($request->contact_info as $contact_info) {
             $ci = auth()->user()->contact_info()
                 ->where('info', '=', $contact_info['info'])
@@ -41,6 +49,6 @@ class UserController extends Controller
 
 
 
-        return redirect('/');
+        return back()->withInput();
     }
 }

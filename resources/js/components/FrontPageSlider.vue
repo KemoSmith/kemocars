@@ -1,10 +1,10 @@
 <template>
     <div>
-        <v-carousel cycle :show-arrows="false" height="75vh">
+        <v-carousel cycle :show-arrows="false" height="calc(75vh - 70px)">
             <v-carousel-item
                 v-for="(item, i) in items"
                 :key="i"
-                :src="`${url}/${item.src}`"
+                :src="`/images/${item.src}`"
             ></v-carousel-item>
         </v-carousel>
     </div>

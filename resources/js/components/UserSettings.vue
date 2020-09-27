@@ -1,102 +1,104 @@
 <template>
-    <v-overlay v-if="showUserSettings" z-index="25" opacity="0.9" color="white">
-        <v-card id="user-settings" light outlined>
-            <v-toolbar
-                dense
-                color="#3474eb"
-                flat
-                dark
-                class="sticky-top"
-            >
-                <v-icon>mdi-account</v-icon>
-                <v-toolbar-title>My Account</v-toolbar-title>
-                <v-spacer></v-spacer>
-                <v-btn icon type="submit"
-                    ><v-icon>mdi-content-save</v-icon></v-btn
-                >
-                <v-btn icon @click="toggleUserSettings"
-                    ><v-icon>mdi-close</v-icon></v-btn
-                >
-            </v-toolbar>
-            <div class="p-4">
-                <v-text-field
-                    outlined
-                    dense
-                    label="Name"
-                    v-model="account.name"
-                    name="name"
-                ></v-text-field>
-                <v-text-field
-                    outlined
-                    dense
-                    label="Email"
-                    v-model="account.email"
-                    name="email"
-                ></v-text-field>
-                <v-divider class="mt-0"></v-divider>
-                <v-toolbar flat dense class="mb-4">
-                    <h4 class="font-weight-light m-0">Contact Info</h4>
+    <v-slide-x-transition>
+        <v-overlay
+            v-if="showUserSettings"
+            z-index="1200"
+            opacity="1"
+            color="grey darken-4"
+        >
+            <v-card id="user-settings" dark tile>
+                <v-toolbar dense flat dark class="sticky-top">
+                    <v-icon class="mr-1">mdi-account</v-icon>
+                    <v-toolbar-title>My Account</v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-select
-                        label="Add Contact Info"
-                        outlined
-                        :items="contactTypes"
+                    <v-btn icon type="submit"
+                        ><v-icon>mdi-content-save</v-icon></v-btn
+                    >
+                    <v-btn icon @click="toggleUserSettings"
+                        ><v-icon>mdi-close</v-icon></v-btn
+                    >
+                </v-toolbar>
+                <div class="p-4">
+                    <v-text-field
+                        filled
                         dense
-                        prepend-inner-icon="mdi-plus"
-                        class="mt-7 w-50"
-                        @change="addContactInfo"
-                        v-model="addContactType"
-                    ></v-select>
-                </v-toolbar>
-                <v-text-field
-                    v-for="(contact, i) in contactInfo"
-                    :key="i"
-                    outlined
-                    dense
-                    :label="contact.type"
-                    v-model="contact.info"
-                    :name="`contact_info[${i}][info]`"
-                    append-icon="mdi-delete"
-                    @click:append="removeContactInfo(i)"
-                ></v-text-field>
-                <input
-                    v-for="(contact, i) in contactInfo"
-                    :key="i"
-                    type="text"
-                    :name="`contact_info[${i}][type]`"
-                    v-model="contact.type"
-                    class="d-none"
-                />
-                <v-divider class="mt-0"></v-divider>
-                <v-toolbar flat dense class="mb-4">
-                    <h4 class="font-weight-light m-0">Change Password</h4>
-                </v-toolbar>
-                <v-text-field
-                    outlined
-                    dense
-                    label="Old Password"
-                    v-model="account.oldPassword"
-                    name="old_password"
-                ></v-text-field>
-                <v-text-field
-                    outlined
-                    dense
-                    label="New Password"
-                    :disabled="!oldPasswordLengthReached"
-                    v-model="account.newPassword"
-                    name="new_password"
-                ></v-text-field>
-                <v-text-field
-                    outlined
-                    dense
-                    label="Confirm New Password"
-                    name="old_password_confirmation"
-                    :disabled="!oldPasswordLengthReached"
-                    v-model="account.confirmNewPassword"
-                ></v-text-field>
-            </div>
-        </v-card>
-    </v-overlay>
+                        label="Name"
+                        v-model="account.name"
+                        name="name"
+                    ></v-text-field>
+                    <v-text-field
+                        readonly
+                        filled
+                        dense
+                        label="Email"
+                        v-model="account.email"
+                        name="email"
+                    ></v-text-field>
+                    <v-divider class="mt-0"></v-divider>
+                    <v-toolbar flat dense class="mb-4">
+                        <h4 class="font-weight-light m-0">Contact Info</h4>
+                        <v-spacer></v-spacer>
+                        <v-select
+                            label="Add Contact Info"
+                            outlined
+                            :items="contactTypes"
+                            dense
+                            prepend-inner-icon="mdi-plus"
+                            class="mt-7 w-50"
+                            @change="addContactInfo"
+                            v-model="addContactType"
+                        ></v-select>
+                    </v-toolbar>
+                    <v-text-field
+                        v-for="(contact, ci_index) in contactInfo"
+                        :key="ci_index"
+                        filled
+                        dense
+                        :label="contact.type"
+                        v-model="contact.info"
+                        :name="`contact_info[${ci_index}][info]`"
+                        append-icon="mdi-delete"
+                        @click:append="removeContactInfo(ci_index)"
+                    ></v-text-field>
+                    <input
+                        v-for="(contact, i) in contactInfo"
+                        :key="i"
+                        type="text"
+                        :name="`contact_info[${i}][type]`"
+                        v-model="contact.type"
+                        class="d-none"
+                    />
+                    <v-divider class="mt-0"></v-divider>
+                    <v-toolbar flat dense class="mb-4">
+                        <h4 class="font-weight-light m-0">Change Password</h4>
+                    </v-toolbar>
+                    <v-text-field
+                        filled
+                        dense
+                        label="Old Password"
+                        v-model="account.oldPassword"
+                        name="old_password"
+                    ></v-text-field>
+                    <v-text-field
+                        filled
+                        dense
+                        label="New Password"
+                        :disabled="!oldPasswordLengthReached"
+                        v-model="account.newPassword"
+                        name="new_password"
+                    ></v-text-field>
+                    <v-text-field
+                        filled
+                        dense
+                        label="Confirm New Password"
+                        name="old_password_confirmation"
+                        :disabled="!oldPasswordLengthReached"
+                        v-model="account.confirmNewPassword"
+                    ></v-text-field>
+                </div>
+            </v-card>
+        </v-overlay>
+    </v-slide-x-transition>
 </template>
 
 <script>

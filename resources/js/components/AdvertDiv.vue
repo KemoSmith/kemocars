@@ -1,18 +1,16 @@
 <template>
-    <v-card flat id="v-filter-form" color="transparent" class="sticky-top">
-        <v-card outlined>
-            <h4 class="mt-3 mx-3">
-                <v-icon color="blue">mdi-bullhorn</v-icon>
-                Advertisment
-            </h4>
-            <div class="col-5 p-0">
-                <v-divider class="m-0"></v-divider>
-            </div>
-            <v-img
-                class="sticky-top"
-                src="https://i.pinimg.com/originals/64/d0/2b/64d02baf5ab0ca725d493dee762dc0b7.jpg"
-            ></v-img>
-        </v-card>
+    <v-card tile id="v-filter-form" color="transparent" class="sticky-top">
+        <h4 class="mt-3 mx-3">
+            <v-icon color="blue">mdi-bullhorn</v-icon>
+            Advertisment
+        </h4>
+        <div class="col-5 p-0">
+            <v-divider class="m-0"></v-divider>
+        </div>
+        <v-img
+            class="sticky-top"
+            src="https://i.pinimg.com/originals/64/d0/2b/64d02baf5ab0ca725d493dee762dc0b7.jpg"
+        ></v-img>
     </v-card>
 </template>
 

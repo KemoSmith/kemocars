@@ -1,5 +1,5 @@
 <template>
-    <v-card outlined id="types-n-shapes">
+    <v-card tile id="types-n-shapes">
         <h4 class="mt-3 mx-3">
             <v-icon color="blue">mdi-filter</v-icon>
             By Make

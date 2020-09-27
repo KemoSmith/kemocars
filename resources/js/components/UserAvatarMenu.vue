@@ -2,16 +2,20 @@
     <v-menu top :close-on-content-click="closeOnContentClick">
         <template v-slot:activator="{ on, attrs }">
             <v-avatar
-                color="#3474eb"
+                color="blue-grey darken-3"
                 style="cursor-pointer"
                 v-on="on"
                 v-bind="attrs"
-                class="border"
+                class="border text-white"
                 >{{ UserInitial }}</v-avatar
             >
-            <v-subheader class="text-white" v-if="JSON.parse(LoggedIn)">{{
-                UserName
-            }}</v-subheader>
+            <a
+                :href="`${url}/vehicle/u/${UserId}`"
+                class="text-decoration-none"
+                v-if="JSON.parse(LoggedIn)"
+            >
+                <v-subheader class="text-white">{{ UserName }}</v-subheader>
+            </a>
             <a
                 v-if="!JSON.parse(LoggedIn)"
                 :href="`${url}/login`"
@@ -64,7 +68,7 @@
 import { mapActions } from "vuex";
 import axios from "axios";
 export default {
-    props: ["UserInitial", "UserName", "LoggedIn", "url"],
+    props: ["UserInitial", "UserName", "LoggedIn", "url", "UserId"],
     data: () => ({
         closeOnContentClick: true
     }),

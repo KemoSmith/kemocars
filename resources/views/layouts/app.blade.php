@@ -23,9 +23,12 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <v-app id="app" class="bg-light">
-            <div style="height: 56px; z-index: 15;" class="mb-0 sticky-top">
-                <v-toolbar color="#3474eb" flat short dark>
+        <v-app id="app" style="background-color: #fefefe;">
+            <div
+                style="height: 57px; z-index: 15;"
+                class="mb-0 sticky-top light-border-bottom"
+            >
+                <v-toolbar color="blue-grey darken-4" dark short>
                     <a href="{{ URL('') }}" class="text-decoration-none"
                         ><v-btn icon class="m-0">
                             <v-icon>mdi-home</v-icon>
@@ -47,8 +50,7 @@
                         <v-text-field
                             dense
                             outlined
-                            class="mt-6"
-                            color="white"
+                            class="mt-7"
                             label="Search"
                             name="search_term"
                             type="search"
@@ -75,6 +77,7 @@
                         logged-in="{{ auth()->user() ? 'true' : 'false' }}"
                         user-name="{{ auth()->user() ? auth()->user()->name : 'Guest' }}"
                         user-initial="{{ auth()->user() ? substr(auth()->user()->name, 0, 1) : 'G' }}"
+                        user-id="{{ auth()->user() ? auth()->user()->id : 'null' }}"
                     ></user-avatar-menu>
                 </v-toolbar>
             </div>

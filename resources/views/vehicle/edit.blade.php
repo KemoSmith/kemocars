@@ -32,6 +32,7 @@
                     >
                         @method('PATCH') @csrf
                         <vehicle-form
+                            attached-ci="{{ json_encode($attached_ci) }}"
                             errors="{{ $errors }}"
                             old-inputs="{{ $oldValues }}"
                         ></vehicle-form>

@@ -25,14 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $vehicles = Vehicle::all();
-
-        foreach ($vehicles as $vehicle) {
-            foreach ($vehicle->image as $image) {
-                $image->path = URL('storage/' . $image->path);
-            }
-        }
-
-        return view('home', compact('vehicles'));
+        return redirect('/gy');
     }
 }

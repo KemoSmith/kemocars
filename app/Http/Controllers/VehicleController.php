@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\VehicleFilterRequest;
 use App\Http\Requests\VehicleStoreRequest;
 use App\Http\Requests\VehicleUpdateRequest;
+use App\User;
 use App\Vehicle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,27 +16,28 @@ class VehicleController extends Controller
 {
     public function index()
     {
+        $vehicles = Vehicle::orderBy('created_at', 'desc')->paginate(6);
 
-        $vehicles = Vehicle::orderBy('created_at', 'desc')->get();
-
-        foreach ($vehicles as $vehicle) {
+        $vehicles->each(function ($vehicle) {
             $vehicle->user;
-            foreach ($vehicle->image as $image) {
+            $vehicle->image->each(function ($image) {
                 $image->path = URL('storage/' . $image->path);
-            }
-        }
+            });
+        });
 
-        return view('vehicle.results', compact('vehicles'));
+
+        return view('vehicles.index', compact('vehicles'));
     }
 
     public function show(Vehicle $vehicle)
     {
         $vehicle->image;
         $vehicle->contact_info;
+        $vehicle->user;
         foreach ($vehicle->image as $img) {
             $img->path = URL('storage/' . $img->path);
         }
-        return view('vehicle.show', compact('vehicle'));
+        return view('vehicles.show', compact('vehicle'));
     }
 
     public function create()
@@ -80,15 +82,17 @@ class VehicleController extends Controller
 
         $oldValues = json_encode($vehicle);
 
+        $attached_ci = $vehicle->contact_info;
 
-        return view('vehicle.edit', compact('oldValues', 'vehicle'));
+
+        return view('vehicle.edit', compact('oldValues', 'vehicle', 'attached_ci'));
     }
 
     public function update(Vehicle $vehicle, VehicleUpdateRequest $request)
     {
         $this->authorize('update', $vehicle);
 
-        $vehicle->update($request->except(['images', 'delete_image']));
+        $vehicle->update($request->except(['images', 'delete_image', 'show_ci']));
 
         if ($request->images)
             foreach ($request->images as $image) {
@@ -106,68 +110,64 @@ class VehicleController extends Controller
             if ($image) $image->delete();
         }
 
+        foreach ($vehicle->contact_info as $ci) {
+            $vehicle->contact_info()->detach($ci);
+        }
+
+        if ($request->show_ci)
+            foreach ($request->show_ci as $ci_id) {
+                $ci = auth()->user()->contact_info()->find($ci_id);
+                if ($ci) $vehicle->contact_info()->attach($ci);
+            }
+
         return redirect("/vehicle/" . $vehicle->id);
     }
 
     public function filter(VehicleFilterRequest $request)
     {
+        $vehicles =
+            Vehicle::when($request->make, function ($query, $make) {
+                $query->where('make', '=', $make);
+            })->when($request->model, function ($query, $model) {
+                $query->where('model', '=', $model);
+            })->when($request->min_year, function ($query, $min_year) {
+                $query->where('min_year', '=', $min_year);
+            })->when($request->max_year, function ($query, $max_year) {
+                $query->where('max_year', '=', $max_year);
+            })->when($request->steering, function ($query, $steering) {
+                $query->where('steering', '=', $steering);
+            })->when($request->min_cc, function ($query, $min_cc) {
+                $query->where('min_cc', '=', $min_cc);
+            })->when($request->max_cc, function ($query, $max_cc) {
+                $query->where('max_cc', '=', $max_cc);
+            })->when($request->drive, function ($query, $drive) {
+                $query->where('drive', '=', $drive);
+            })->when($request->transmission, function ($query, $transmission) {
+                $query->where('transmission', '=', $transmission);
+            })->when($request->min_km, function ($query, $min_km) {
+                $query->where('min_km', '=', $min_km);
+            })->when($request->max_km, function ($query, $max_km) {
+                $query->where('max_km', '=', $max_km);
+            })->when($request->fuel, function ($query, $fuel) {
+                $query->where('fuel', '=', $fuel);
+            })->when($request->condition, function ($query, $condition) {
+                $query->where('condition', '=', $condition);
+            })->when($request->min_price, function ($query, $min_price) {
+                $query->where('min_price', '=', $min_price);
+            })->when($request->max_price, function ($query, $max_price) {
+                $query->where('max_price', '=', $max_price);
+            })->paginate(6);
 
-        $vehicles = Vehicle::orderBy('created_at', 'desc')->get();
-
-        foreach ($vehicles as $vehicle) {
+        $vehicles->each(function ($vehicle) {
             $vehicle->user;
-            foreach ($vehicle->image as $image) {
+            $vehicle->image->each(function ($image) {
                 $image->path = URL('storage/' . $image->path);
-            }
-        }
+            });
+        });
 
-        if ($request->make)
-            $vehicles = $vehicles->where('make', '=', $request->make);
+        $endpoint = 'api/vehicle/filter';
 
-        if ($request->model)
-            $vehicles = $vehicles->where('model', '=', $request->model);
-
-        if ($request->min_year)
-            $vehicles = $vehicles->where('year', '>=', $request->min_year);
-
-        if ($request->max_year)
-            $vehicles = $vehicles->where('year', '<=', $request->max_year);
-
-        if ($request->steering)
-            $vehicles = $vehicles->where('steering', '=', $request->steering);
-
-        if ($request->min_cc)
-            $vehicles = $vehicles->where('engine_displacement', '>=', $request->min_cc);
-
-        if ($request->max_cc)
-            $vehicles = $vehicles->where('engine_displacement', '<=', $request->max_cc);
-
-        if ($request->drive)
-            $vehicles = $vehicles->where('driving_wheels', '=', $request->drive);
-
-        if ($request->transmission)
-            $vehicles = $vehicles->where('transmission', '=', $request->transmission);
-
-        if ($request->min_km)
-            $vehicles = $vehicles->where('distance', '>=', $request->min_km);
-
-        if ($request->max_km)
-            $vehicles = $vehicles->where('distance', '<=', $request->max_km);
-
-        if ($request->fuel)
-            $vehicles = $vehicles->where('fuel', '=', $request->fuel);
-
-        if ($request->condition)
-            $vehicles = $vehicles->where('condition', '=', $request->condition);
-
-        if ($request->min_price)
-            $vehicles = $vehicles->where('price', '>=', $request->min_price);
-
-        if ($request->max_price)
-            $vehicles = $vehicles->where('price', '<=', $request->max_price);
-
-
-        return view('vehicle.results', compact('vehicles'));
+        return view('vehicles.results', compact('vehicles', 'endpoint'));
     }
 
     public function search()
@@ -183,16 +183,34 @@ class VehicleController extends Controller
             ->orWhere(DB::raw('concat(model," ",description," ",year," ",make)'), 'like', "%{$searchTerm}%")
             ->orWhere(DB::raw('concat(description," ",model," ",year," ",make)'), 'like', "%{$searchTerm}%")
             ->orWhere(DB::raw('concat(description," ",model," ",year," ",make)'), 'like', "%{$searchTerm}%")
-            ->orderBy('created_at', 'desc')->get();
+            ->orderBy('created_at', 'desc')->paginate(6);
 
-        foreach ($vehicles as $vehicle) {
+        $vehicles->each(function ($vehicle) {
             $vehicle->user;
-            foreach ($vehicle->image as $image) {
+            $vehicle->image->each(function ($image) {
                 $image->path = URL('storage/' . $image->path);
-            }
-        }
+            });
+        });
 
-        return view('vehicle.results', compact('vehicles'));
+        $endpoint = '/api/vehicle/search';
+
+        return view('vehicles.results', compact('vehicles', 'endpoint'));
+    }
+
+    public function user_vehicles(User $user)
+    {
+        $vehicles = $user->vehicle()->orderBy('created_at', 'desc')->paginate(6);
+
+        $vehicles->each(function ($vehicle) {
+            $vehicle->user;
+            $vehicle->image->each(function ($image) {
+                $image->path = URL('storage/' . $image->path);
+            });
+        });
+
+        $endpoint = "/api/vehicle/u/" . $user->id;
+
+        return view('vehicles.results', compact('vehicles', 'endpoint'));
     }
 
     public function destroy(Vehicle $vehicle)

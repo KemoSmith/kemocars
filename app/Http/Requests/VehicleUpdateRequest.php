@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Vehicle;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -45,10 +46,17 @@ class VehicleUpdateRequest extends FormRequest
             "condition" => ['required', Rule::in(['New', 'Foreign Used', 'Used', 'Refurbished'])],
             "description" => 'nullable|string|max:500',
             "price" => 'required|numeric|max:1000000000',
-            "images" => 'array|max:30',
+            "images" => $this->imagesRule(),
             "images.*" => 'required|image',
-            "delete_image" => 'array|max:30',
-            "delete_image.*" => 'required|integer',
+            "show_ci" => 'array',
+            "show_ci.*" => 'integer|exists:contact_infos,id'
         ];
+    }
+
+    private function imagesRule()
+    {
+        $vehicle = request()->route('vehicle');
+        $allowedAmount = 30 - count($vehicle->image);
+        return "array|max:$allowedAmount";
     }
 }

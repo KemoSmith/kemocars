@@ -8,7 +8,8 @@ import Vuetify from "vuetify";
 import Vuex from "vuex";
 import VueRouter from "vue-router";
 import VehicleFrom from "./store/modules/vehicleForm";
-import User from "./store/modules/user";
+import AppMod from "./store/modules/appMod";
+import VueSocialSharing from "vue-social-sharing";
 import { ValidationProvider } from "vee-validate";
 import "./validation";
 require("./bootstrap");
@@ -18,11 +19,12 @@ window.Vue = require("vue");
 Vue.use(Vuetify);
 Vue.use(Vuex);
 Vue.use(VueRouter);
+Vue.use(VueSocialSharing);
 
 const store = new Vuex.Store({
     modules: {
         VehicleFrom,
-        User
+        AppMod
     }
 });
 
@@ -73,9 +75,49 @@ Vue.component(
     require("./components/VehicleTypesNShapes.vue").default
 );
 Vue.component("advert-div", require("./components/AdvertDiv.vue").default);
-Vue.component("login-button", require("./components/LoginButton.vue").default);
 
 Vue.component("ValidationProvider", ValidationProvider);
+
+// --------------------------------------
+Vue.component(
+    "cs-advertise-page",
+    require("./components/CsAdvertisePage.vue").default
+);
+Vue.component(
+    "cs-site-background",
+    require("./components/CsSiteBackground.vue").default
+);
+Vue.component(
+    "cs-verify-alert",
+    require("./components/CsVerifyAlert.vue").default
+);
+Vue.component("cs-login-form", require("./components/CsLoginForm.vue").default);
+Vue.component(
+    "cs-register-form",
+    require("./components/CsRegisterForm.vue").default
+);
+Vue.component("cs-app-bar", require("./components/CsAppBar.vue").default);
+Vue.component(
+    "cs-show-vehicle",
+    require("./components/CsShowVehicle.vue").default
+);
+Vue.component("cs-card-group", require("./components/CsCardGroup.vue").default);
+Vue.component(
+    "cs-search-overlay",
+    require("./components/CsSearchOverlay.vue").default
+);
+Vue.component(
+    "cs-filter-overlay",
+    require("./components/CsFilterOverlay.vue").default
+);
+Vue.component(
+    "cs-post-vehicle-overlay",
+    require("./components/CsPostVehicleOverlay.vue").default
+);
+Vue.component(
+    "cs-edit-vehicle-overlay",
+    require("./components/CsEditVehicleOverlay.vue").default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

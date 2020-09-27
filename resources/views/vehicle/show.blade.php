@@ -1,8 +1,8 @@
 @extends('layouts.app') @section('content')
 <div class="d-flex justify-content-center row m-0 pt-3 pr-0 pb-3 pl-3">
     <div class="col-12 pt-2 pr-3 pb-0 pl-0">
-        <v-card outlined>
-            <v-toolbar dense flat>
+        <v-card tile>
+            <v-toolbar dense flat color="blue-grey darken-4" dark>
                 @if(auth()->user() && auth()->user()->id === $vehicle->user->id)
                 <a
                     href="{{ URL('vehicle/' . $vehicle->id . '/edit') }}"
@@ -18,9 +18,13 @@
                     {{ "$vehicle->year $vehicle->make $vehicle->model" }}
                 </h3>
                 <v-spacer></v-spacer>
-                <v-subheader class="text-dark"
-                    >Listing By | {{ $vehicle->user->name }}</v-subheader
+                 <a
+                href="/vehicle/u/{{$vehicle->user->id}}"
+                class="text-decoration-none"
                 >
+                    <v-subheader class="text-dark"
+                    >Listing By | {{ $vehicle->user->name }}</v-subheader>
+                </a>
                 <v-avatar
                     color="blue"
                     size="40"
@@ -39,14 +43,14 @@
     <div class="col-10 pt-2 pr-3 pb-0 pl-0">
         <div class="row pt-2 pr-4 pb-4 pl-0">
             <div class="col-7 pt-1 pr-0 pb-0 pl-4">
-                <v-card outlined class="h-100 p-3">
+                <v-card tile elevation='0' class="h-100">
                     <image-slider
                         stringed-image-objects="{{json_encode($vehicle->image)}}"
                     ></image-slider>
                 </v-card outlined>
             </div>
             <div class="col-5 pt-1 pr-0 pb-0 pl-4">
-                <v-card outlined class="p-3">
+                <v-card tile class="p-3">
                     <v-alert
                         type="info"
                         color="blue-grey"
@@ -117,7 +121,7 @@
                         </template>
                     </v-simple-table>
                 </v-card>
-                <v-card outlined class="p-3 mt-4">
+                <v-card tile class="p-3 mt-4">
                     <h4 class="mt-3 mx-3">
                         <v-icon color="blue">mdi-mail</v-icon>
                         Contact Information

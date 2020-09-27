@@ -1,8 +1,33 @@
 <template>
     <div>
+        <h3 class="mb-5">Contact Info</h3>
+        <div v-for="(ci, i) in contact_info" :key="i">
+            <v-text-field
+                dense
+                outlined
+                color="blue"
+                :label="ci.type"
+                :value="ci.info"
+                :append-icon="ci.hide ? 'mdi-eye' : 'mdi-eye-off'"
+                @click:append="ci.hide = !ci.hide"
+                readonly
+            ></v-text-field>
+            <input
+                v-if="!ci.hide"
+                type="number"
+                :name="`show_ci[${i}]`"
+                :value="ci.id"
+                class="d-none"
+            />
+        </div>
+        <div class="d-flex justify-content-center pb-3">
+            <v-btn text class="text-none" small @click="toggleUserSettings()"
+                >Manage contact info in My Account.</v-btn
+            >
+        </div>
+        <v-divider class="mt-0"></v-divider>
         <h3 class="mb-3">Your Car Specifications</h3>
         <v-divider class="mt-0 mb-6"></v-divider>
-
         <v-file-input
             id="vehicle-form-images-input"
             dense
@@ -331,32 +356,6 @@
             >{{ error }}</v-alert
         >
         <v-divider class="mt-0"></v-divider>
-        <h3 class="mb-5">Contact Info</h3>
-        <div v-for="(ci, i) in contact_info" :key="i">
-            <v-text-field
-                dense
-                outlined
-                color="blue"
-                :label="ci.type"
-                :value="ci.info"
-                :append-icon="ci.hide ? 'mdi-eye' : 'mdi-eye-off'"
-                @click:append="ci.hide = !ci.hide"
-                readonly
-            ></v-text-field>
-            <input
-                v-if="!ci.hide"
-                type="number"
-                :name="`show_ci[${i}]`"
-                :value="ci.id"
-                class="d-none"
-            />
-        </div>
-        <div class="d-flex justify-content-center pb-3">
-            <v-btn text class="text-none" small @click="toggleUserSettings()"
-                >Manage contact info in My Account.</v-btn
-            >
-        </div>
-        <v-divider class="mt-0"></v-divider>
         <div class="w-100 justify-content-center">
             <v-btn type="submit" outlined color="blue">Submit</v-btn>
         </div>
@@ -367,7 +366,7 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-    props: ["errors", "oldInputs"],
+    props: ["errors", "oldInputs", "attachedCi"],
     name: "VehicleForm",
     mounted() {
         this.parsedErrors = JSON.parse(this.errors);
@@ -396,11 +395,18 @@ export default {
                 url: "/api/contact_info"
             }).then(response => {
                 response.data.contact_info.forEach(e => {
+                    let hide = false;
+                    if (this.attachedCi) {
+                        hide = true;
+                        JSON.parse(this.attachedCi).forEach(ci => {
+                            if (e.id == ci.id) hide = false;
+                        });
+                    }
                     this.contact_info.push({
                         type: e.type,
                         info: e.info,
                         id: e.id,
-                        hide: false
+                        hide
                     });
                 });
             });

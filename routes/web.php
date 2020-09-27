@@ -13,20 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-// Route::get('/', 'HomeController@index')->name('home');
+Route::get('/advertise', function () {
+    return view('promo.advertise');
+})->name('home');
 
 // Vehicle
-Route::get('/vehicle/create', 'VehicleController@create')->name('vehicle.create');
+Route::get('/vehicle/create', 'VehicleController@create')->name('vehicle.create')->middleware('verified');
 Route::get('/vehicle/filter', 'VehicleController@filter')->name('vehicle.filter');
 Route::get('/vehicle/search', 'VehicleController@search')->name('vehicle.search');
-Route::get('/vehicle/{vehicle}/edit', 'VehicleController@edit')->name('vehicle.edit');
+Route::get('/vehicle/u/{user}', 'VehicleController@user_vehicles')->name('vehicle.user_vehicles');
+Route::get('/vehicle/{vehicle}/edit', 'VehicleController@edit')->name('vehicle.edit')->middleware('verified');
 Route::get('/vehicle/{vehicle}', 'VehicleController@show')->name('vehicle.show');
-Route::patch('/vehicle/{vehicle}', 'VehicleController@update')->name('vehicle.update');
-Route::post('/vehicle', 'VehicleController@store')->name('vehicle.store');
+Route::patch('/vehicle/{vehicle}', 'VehicleController@update')->name('vehicle.update')->middleware('verified');
+Route::post('/vehicle', 'VehicleController@store')->name('vehicle.store')->middleware('verified');;
 Route::get('/', 'VehicleController@index')->name('vehicle.index');
-Route::delete('/vehicle/{vehicle}', 'VehicleController@destroy')->name('vehicle.destroy');
+Route::delete('/vehicle/{vehicle}', 'VehicleController@destroy')->name('vehicle.destroy')->middleware('verified');
 
 // User
-Route::patch('/user/{user}', 'UserController@update')->name('user.update');
+Route::patch('/user/{user}', 'UserController@update')->name('user.update')->middleware('verified');
