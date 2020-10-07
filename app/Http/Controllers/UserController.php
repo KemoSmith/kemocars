@@ -25,7 +25,11 @@ class UserController extends Controller
         if ($request->old_password) {
             $authenticated = auth()->attempt(['email' => auth()->user()->email, 'password' => $request->old_password]);
 
-            if ($request->new_password && $authenticated) {
+            if(!$authenticated) {
+                return abort(422, 'Wrong old Password');
+            }
+
+            if ($request->new_password) {
                 auth()->user()->update(['password' => bcrypt($request->new_password)]);
             }
         }

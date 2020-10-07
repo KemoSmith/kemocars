@@ -35,9 +35,11 @@ class VehicleController extends Controller
         $vehicle->image;
         $vehicle->contact_info;
         $vehicle->user;
+
         foreach ($vehicle->image as $img) {
             $img->path = URL('storage/' . $img->path);
         }
+
         return response()->json([
             'vehicle' => $vehicle
         ]);
@@ -192,8 +194,6 @@ class VehicleController extends Controller
                 $image->path = URL('storage/' . $image->path);
             });
         });
-
-        $endpoint = '/api/vehicle/search';
 
         return response()->json(['vehicles' => $vehicles->items()]);
     }
