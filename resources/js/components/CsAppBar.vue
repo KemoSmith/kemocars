@@ -16,20 +16,21 @@
                         src="/images/guyana_flag.svg"
                         alt="Guyana's Flag"
                         height="15px"
+                        class="cs-d-none-md"
                     />
-                    <h6 class="m-0 ml-1">Guyana</h6>
-                    <v-divider class="my-0 mx-5" dark vertical></v-divider>
-                    <v-btn icon @click="togglePostVehicle()"
+                    <h6 class="m-0 ml-1 cs-d-none-md">Guyana</h6>
+                    <v-divider class="my-0 mx-5 cs-d-none-md" dark vertical></v-divider>
+                    <v-btn class="cs-d-none-xsm" icon @click="togglePostVehicle()"
                         ><v-icon>mdi-facebook</v-icon></v-btn
                     >
-                    <v-btn icon @click="togglePostVehicle()"
+                    <v-btn class="cs-d-none-xsm" icon @click="togglePostVehicle()"
                         ><v-icon>mdi-twitter</v-icon></v-btn
                     >
-                    <v-toolbar-items>
-                        <v-btn text class="text-none cs-d-none-xsm">
+                    <v-toolbar-items class="cs-d-none-sm">
+                        <v-btn text class="text-none text-decoration-none cs-d-none-xsm" href="/advertise">
                             <h5 class="m-0 font-weight-normal">
                                 <v-icon>mdi-handshake</v-icon>
-                                Partner With Us
+                                Advertise
                             </h5>
                         </v-btn>
                     </v-toolbar-items>
@@ -43,7 +44,7 @@
                     <v-btn icon @click="toggleSearch()"
                         ><v-icon>mdi-magnify</v-icon></v-btn
                     >
-                    <v-btn icon @click="toggleDarkMode()"
+                    <v-btn class="cs-d-none-xxsm" icon @click="toggleDarkMode()"
                         ><v-icon>mdi-theme-light-dark</v-icon></v-btn
                     >
                     <v-menu top :close-on-content-click="closeOnContentClick">
@@ -58,7 +59,7 @@
                             >
                             <a
                                 :href="`${url}/vehicle/u/${UserId}`"
-                                class="text-decoration-none"
+                                class="text-decoration-none cs-d-none-sm"
                                 v-if="JSON.parse(LoggedIn)"
                             >
                                 <v-subheader class="text-white">{{

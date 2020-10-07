@@ -4,35 +4,39 @@
             <v-toolbar dense flat>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-                    <v-btn small text class="text-none"
-                        >Terms & Conditions</v-btn
+                    <v-btn small text class="text-none text-decoration-none" href="/terms-of-use"
+                    >Terms of Use
+                    </v-btn
                     >
                     <v-btn
                         small
                         text
                         class="text-none text-decoration-none"
                         href="/advertise"
-                        >Advertise</v-btn
+                    >Advertise
+                    </v-btn
                     >
-                    <v-btn small text class="text-none"
-                        >Business Oppertunities</v-btn
+                    <v-btn
+                        small
+                        text
+                        class="text-none text-decoration-none"
+                        href="/register"
+                    >Sign Up
+                    </v-btn
                     >
-                    <v-btn small text class="text-none">List A Vehicle</v-btn>
                 </v-toolbar-items>
                 <v-spacer></v-spacer>
             </v-toolbar>
             <v-divider class="m-0" light></v-divider>
-            <v-toolbar dense flat color="grey darken-4">
-                <v-spacer></v-spacer>
-                <v-subheader>
+            <v-card tile elevation="0" color="grey darken-4" class="d-flex justify-content-center">
+                <v-subheader class="text-center">
                     &copy; Copyright
                     {{
-                        new Date().getFullYear() +
-                            " — Carvidor | Built & Maintained By Kemo Smith"
+                    new Date().getFullYear() +
+                    " — Carvidor"
                     }}
                 </v-subheader>
-                <v-spacer></v-spacer>
-            </v-toolbar>
+            </v-card>
         </div>
     </v-footer>
 </template>

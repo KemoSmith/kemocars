@@ -26,16 +26,12 @@
                                     vertical
                                     class="mx-4 my-0"
                                 ></v-divider>
-                                <v-toolbar-title
-                                    >Advertise With Us</v-toolbar-title
+                                <v-toolbar-title class="cs-d-none-xsm"
+                                >Advertise With Us
+                                </v-toolbar-title
                                 >
                                 <v-spacer></v-spacer>
                                 <v-toolbar-items>
-                                    <v-btn large class="text-none" text>
-                                        <v-icon class="mr-1"
-                                            >mdi-handshake</v-icon
-                                        >Partner With Us</v-btn
-                                    >
                                     <v-btn
                                         large
                                         class="text-none"
@@ -43,9 +39,11 @@
                                         @click="scrollToDiv('reach-us')"
                                     >
                                         <v-icon class="mr-1"
-                                            >mdi-card-account-phone</v-icon
+                                        >mdi-card-account-phone
+                                        </v-icon
                                         >
-                                        Reach Us</v-btn
+                                        Reach Us
+                                    </v-btn
                                     >
                                 </v-toolbar-items>
                             </v-toolbar>
@@ -58,9 +56,9 @@
                     class="w-100 d-flex align-items-center justify-content-center"
                 >
                     <div
-                        class="row m-0 col-12 col-sm-12 col-md-11 col-lg-10 p-0"
+                        class="row m-0 col-12 col-sm-12 col-md-11 col-lg-10 p-0 "
                     >
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6 ">
                             <div class="d-flex">
                                 <a href="/" class="mx-auto">
                                     <img
@@ -76,15 +74,17 @@
                                 Our Audience, Your Products & Services.
                             </h3>
                         </div>
-                        <div class="col-6 d-flex align-items-center">
+                        <div
+                            class="col-12 col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start">
                             <v-card
                                 dark
                                 color="transparent"
                                 tile
                                 flat
-                                class="col-8 p-0"
+                                class="col-10 p-0"
                             >
                                 <v-toolbar flat dense color="transparent">
+                                    <v-spacer class="d-lg-none"></v-spacer>
                                     <v-toolbar-title>
                                         <v-icon>mdi-palette-swatch</v-icon>
                                         We Offer
@@ -92,40 +92,42 @@
                                     <v-spacer></v-spacer>
                                 </v-toolbar>
                                 <v-divider class="m-0" dark></v-divider>
-                                <v-list color="transparent">
-                                    <v-list-item dense>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-check</v-icon>
-                                        </v-list-item-icon>
-                                        <v-list-item-title>
-                                            Fully Cusomizable Ad Experiences
-                                        </v-list-item-title>
-                                    </v-list-item>
-                                    <v-list-item dense>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-check</v-icon>
-                                        </v-list-item-icon>
-                                        <v-list-item-title>
-                                            In Depth Feedback & Statistics
-                                        </v-list-item-title>
-                                    </v-list-item>
-                                    <v-list-item dense>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-check</v-icon>
-                                        </v-list-item-icon>
-                                        <v-list-item-title>
-                                            Global Standard Service & Support
-                                        </v-list-item-title>
-                                    </v-list-item>
-                                    <v-list-item dense>
-                                        <v-list-item-icon>
-                                            <v-icon>mdi-check</v-icon>
-                                        </v-list-item-icon>
-                                        <v-list-item-title>
-                                            Flexable Payment Terms
-                                        </v-list-item-title>
-                                    </v-list-item>
-                                </v-list>
+                                <div class="w-100 d-flex justify-content-center justify-content-lg-start">
+                                    <v-list color="transparent">
+                                        <v-list-item dense>
+                                            <v-list-item-icon>
+                                                <v-icon>mdi-check</v-icon>
+                                            </v-list-item-icon>
+                                            <v-list-item-title>
+                                                Fully Cusomizable Ad Experiences
+                                            </v-list-item-title>
+                                        </v-list-item>
+                                        <v-list-item dense>
+                                            <v-list-item-icon>
+                                                <v-icon>mdi-check</v-icon>
+                                            </v-list-item-icon>
+                                            <v-list-item-title>
+                                                In Depth Feedback & Statistics
+                                            </v-list-item-title>
+                                        </v-list-item>
+                                        <v-list-item dense>
+                                            <v-list-item-icon>
+                                                <v-icon>mdi-check</v-icon>
+                                            </v-list-item-icon>
+                                            <v-list-item-title>
+                                                Global Standard Service & Support
+                                            </v-list-item-title>
+                                        </v-list-item>
+                                        <v-list-item dense>
+                                            <v-list-item-icon>
+                                                <v-icon>mdi-check</v-icon>
+                                            </v-list-item-icon>
+                                            <v-list-item-title>
+                                                Flexable Payment Terms
+                                            </v-list-item-title>
+                                        </v-list-item>
+                                    </v-list>
+                                </div>
                             </v-card>
                         </div>
                     </div>
@@ -138,16 +140,19 @@
                         outlined
                         small
                         @click="scrollToDiv('customizable-ad-experiences')"
-                        ><v-icon>mdi-arrow-down</v-icon></v-btn
+                    >
+                        <v-icon>mdi-arrow-down</v-icon>
+                    </v-btn
                     >
                     <v-spacer></v-spacer>
                 </v-toolbar>
             </div>
         </v-img>
         <v-divider id="customizable-ad-experiences" class="m-0"></v-divider>
-        <div class="bg-light w-100">
+        <div class="bg-light w-100 px-4">
             <h1 class="text-center mt-12 font-weight-light">
-                <v-icon color="blue" size="50">mdi-bullhorn</v-icon> Fully
+                <v-icon color="blue" size="50">mdi-bullhorn</v-icon>
+                Fully
                 Customizable Ad Experiences
             </h1>
             <div class="d-flex justify-content-center">
@@ -158,7 +163,7 @@
                     class="row m-0 mb-12 col-12 col-sm-12 col-md-11 col-lg-10 p-0"
                 >
                     <div
-                        class="col-5 d-flex justify-content-center align-items-center"
+                        class="col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center"
                     >
                         <v-card
                             light
@@ -176,59 +181,67 @@
                                 <v-spacer></v-spacer>
                             </v-toolbar>
                             <v-divider class="m-0"></v-divider>
-                            <v-list color="transparent">
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue"
-                                            >mdi-circle-small</v-icon
-                                        >
-                                    </v-list-item-icon>
-                                    <v-list-item-title
+                            <div
+                                class="d-flex justify-content-center justify-content-lg-center justify-content-xl-start">
+                                <v-list color="transparent">
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue"
+                                            >mdi-circle-small
+                                            </v-icon
+                                            >
+                                        </v-list-item-icon>
+                                        <v-list-item-title
                                         >Advertise on regular ad slots.
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue"
-                                            >mdi-circle-small</v-icon
-                                        >
-                                    </v-list-item-icon>
-                                    <v-list-item-title
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue"
+                                            >mdi-circle-small
+                                            </v-icon
+                                            >
+                                        </v-list-item-icon>
+                                        <v-list-item-title
                                         >Choose the pages you appear on.
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue"
-                                            >mdi-circle-small</v-icon
-                                        >
-                                    </v-list-item-icon>
-                                    <v-list-item-title
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue"
+                                            >mdi-circle-small
+                                            </v-icon
+                                            >
+                                        </v-list-item-icon>
+                                        <v-list-item-title
                                         >Choose where to redirect potential
-                                        customers.
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue"
-                                            >mdi-circle-small</v-icon
-                                        >
-                                    </v-list-item-icon>
-                                    <v-list-item-title>
-                                        Host your promotions on our site.
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue"
-                                            >mdi-circle-small</v-icon
-                                        >
-                                    </v-list-item-icon>
-                                    <v-list-item-title>
-                                        Do Much More...
-                                    </v-list-item-title>
-                                </v-list-item>
-                            </v-list>
+                                            customers.
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue"
+                                            >mdi-circle-small
+                                            </v-icon
+                                            >
+                                        </v-list-item-icon>
+                                        <v-list-item-title>
+                                            Host your promotions on our site.
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue"
+                                            >mdi-circle-small
+                                            </v-icon
+                                            >
+                                        </v-list-item-icon>
+                                        <v-list-item-title>
+                                            Do Much More...
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </div>
                             <v-divider class="m-0"></v-divider>
                             <h4 class="font-weight-light mt-4 text-center">
                                 Whatever You Think Of, We Can Develop A
@@ -236,7 +249,7 @@
                             </h4>
                         </v-card>
                     </div>
-                    <div class="col-7">
+                    <div class="col-12 col-md-12 col-xl-7">
                         <v-img
                             src="/images/undraw/undraw_online_ad.svg"
                         ></v-img>
@@ -244,9 +257,10 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white w-100 pt-12">
+        <div class="bg-white w-100 pt-12 px-4">
             <h1 class="text-center font-weight-light">
-                <v-icon color="blue" size="50">mdi-chart-box</v-icon> In Depth
+                <v-icon color="blue" size="50">mdi-chart-box</v-icon>
+                In Depth
                 Feedback & Statistics
             </h1>
             <div class="d-flex justify-content-center">
@@ -256,13 +270,13 @@
                 <div
                     class="row m-0 mb-7 col-12 col-sm-12 col-md-11 col-lg-10 p-0 d-flex justify-content-center"
                 >
-                    <div class="col-7">
+                    <div class="col-12 col-md-12 col-xl-7">
                         <v-img
                             src="/images/undraw/undraw_Marketing.svg"
                         ></v-img>
                     </div>
                     <div
-                        class="col-5 d-flex justify-content-center align-items-center"
+                        class="col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center"
                     >
                         <v-card
                             light
@@ -277,10 +291,10 @@
                             </h4>
                             <h6 class="font-weight-normal mt-4 text-center">
                                 <strong
-                                    >Know your potential customers so you can
+                                >Know your potential customers so you can
                                     reach them.</strong
                                 >
-                                <br />
+                                <br/>
                                 With us, you can view the items that lead to an
                                 engagement with your ad, or the ads in your
                                 campaign that have a higher engagement rate.
@@ -290,9 +304,10 @@
                 </div>
             </div>
         </div>
-        <div class="bg-light w-100 pt-12">
+        <div class="bg-light w-100 pt-12 px-4">
             <h1 class="text-center font-weight-light">
-                <v-icon color="blue" size="50">mdi-lifebuoy</v-icon>Global
+                <v-icon color="blue" size="50">mdi-lifebuoy</v-icon>
+                Global
                 Standard Service & Support
             </h1>
             <div class="d-flex justify-content-center">
@@ -303,7 +318,7 @@
                     class="row m-0 mb-7 col-12 col-sm-12 col-md-11 col-lg-10 p-0 d-flex justify-content-center"
                 >
                     <div
-                        class="col-5 d-flex justify-content-center align-items-center"
+                        class="col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center"
                     >
                         <v-card
                             light
@@ -324,7 +339,7 @@
                             </h6>
                         </v-card>
                     </div>
-                    <div class="col-7">
+                    <div class="col-12 col-md-12 col-xl-7">
                         <v-img
                             src="/images/undraw/undraw_positive_attitude.svg"
                         ></v-img>
@@ -332,9 +347,10 @@
                 </div>
             </div>
         </div>
-        <div id="reach-us" class="bg-white w-100 pt-12">
+        <div id="reach-us" class="bg-white w-100 pt-12 px-4">
             <h1 class="text-center font-weight-light">
-                <v-icon color="blue" size="50">mdi-phone</v-icon>Reach Us
+                <v-icon color="blue" size="50">mdi-phone</v-icon>
+                Reach Us
             </h1>
             <div class="d-flex justify-content-center">
                 <v-divider class="col-8 p-0"></v-divider>
@@ -343,8 +359,9 @@
                 <div
                     class="row m-0 mb-7 col-12 col-sm-12 col-md-11 col-lg-10 p-0 d-flex justify-content-center"
                 >
-                    <div class="col-6 d-flex justify-content-end">
-                        <v-card tile class="col-7 p-0" outlined>
+                    <div
+                        class="col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center justify-content-xl-end">
+                        <v-card tile class="col-12 col-sm-7 col-lg-8 col-xl-10 p-0 p-0" outlined>
                             <v-toolbar dense flat>
                                 <v-toolbar-title>Contact Form</v-toolbar-title>
                             </v-toolbar>
@@ -375,23 +392,27 @@
                             <v-card-actions>
                                 <v-spacer></v-spacer>
                                 <v-btn dark color="blue"
-                                    ><v-icon>mdi-send</v-icon> Submit</v-btn
+                                >
+                                    <v-icon>mdi-send</v-icon>
+                                    Submit
+                                </v-btn
                                 >
                                 <v-spacer></v-spacer>
                             </v-card-actions>
                         </v-card>
                     </div>
                     <div
-                        class="col-6 d-flex justify-content-start align-items-center"
+                        class="col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center justify-content-xl-start"
                     >
                         <v-card
                             light
                             color="transparent"
                             tile
                             flat
-                            class="col-7 p-0"
+                            class="col-12 col-lg-9 p-0"
                         >
                             <v-toolbar flat dense color="transparent">
+                                <v-spacer class="d-xl-none"></v-spacer>
                                 <v-toolbar-title class="font-weight-bold">
                                     <v-icon color="blue">mdi-mail</v-icon>
                                     Contact Options
@@ -399,25 +420,27 @@
                                 <v-spacer></v-spacer>
                             </v-toolbar>
                             <v-divider class="m-0"></v-divider>
-                            <v-list color="transparent">
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue">mdi-phone</v-icon>
-                                    </v-list-item-icon>
-                                    <v-list-item-title>
-                                        (592) 611-7899
-                                    </v-list-item-title>
-                                </v-list-item>
-                                <v-list-item dense>
-                                    <v-list-item-icon>
-                                        <v-icon color="blue">mdi-email</v-icon>
-                                    </v-list-item-icon>
-                                    <v-list-item-title>
-                                        ksbeats123@gmail.com
-                                    </v-list-item-title>
-                                </v-list-item>
-                            </v-list>
-                            <v-card-text>
+                            <div class="d-flex justify-content-center justify-content-lg-center justify-content-xl-start">
+                                <v-list color="transparent">
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue">mdi-phone</v-icon>
+                                        </v-list-item-icon>
+                                        <v-list-item-title>
+                                            (592) 611-7899
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                    <v-list-item dense>
+                                        <v-list-item-icon>
+                                            <v-icon color="blue">mdi-email</v-icon>
+                                        </v-list-item-icon>
+                                        <v-list-item-title>
+                                            ksbeats123@gmail.com
+                                        </v-list-item-title>
+                                    </v-list-item>
+                                </v-list>
+                            </div>
+                            <v-card-text class="text-sm-center text-lg-left">
                                 Available from 09:00 to 17:00 Monday - Friday.
                             </v-card-text>
                         </v-card>
@@ -429,13 +452,20 @@
 </template>
 
 <script>
-import { scrollIntoView } from "scroll-js";
+import {scrollIntoView} from "scroll-js";
+
 export default {
     methods: {
         scrollToDiv(id) {
             scrollIntoView(document.getElementById(id), document.body, {
                 behavior: "smooth"
             });
+
+            setTimeout(() => {
+                scrollIntoView(document.getElementById(id), document.body, {
+                    behavior: "smooth"
+                });
+            }, 500);
         }
     }
 };

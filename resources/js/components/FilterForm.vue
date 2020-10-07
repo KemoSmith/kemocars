@@ -173,7 +173,8 @@
                     class="col-12 pt-0 pr-4 pb-4 pl-0 d-flex justify-content-center"
                 >
                     <v-btn type="submit" color="blue" dark>
-                        <v-icon>mdi-filter</v-icon>Filter
+                        <v-icon>mdi-filter</v-icon>
+                        Filter
                     </v-btn>
                 </div>
             </v-card>
@@ -185,7 +186,7 @@
             method="GET"
             :action="`${url}/vehicle/filter`"
         >
-            <input id="filter-by-logo-input" type="text" class="d-none" />
+            <input id="filter-by-logo-input" type="text" class="d-none"/>
             <div class="col-2">
                 <v-img
                     @click="filterByLogo('make', 'Toyota')"
@@ -245,7 +246,8 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import {mapGetters} from "vuex";
+
 export default {
     props: ["url", "requestAll"],
     mounted() {

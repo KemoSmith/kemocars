@@ -27,13 +27,6 @@
                                     `${vehicle.year} ${vehicle.make} ${vehicle.model}`
                                 }}
                             </h3>
-                            <v-spacer></v-spacer>
-                            <h5
-                                class="m-0 red--text font-weight-normal crop-text"
-                            >
-                                {{ `$${vehicle.price}` }}
-                                <v-icon class="mr-1" small>mdi-tag</v-icon>
-                            </h5>
                         </v-toolbar>
                         <div class="p-sm-4">
                             <div class="image-ar-outer">
@@ -116,89 +109,103 @@
                                 class="m-0"
                                 icon
                                 @click="toggleEditVehicle()"
-                                ><v-icon>mdi-pencil</v-icon></v-btn
+                            >
+                                <v-icon>mdi-pencil</v-icon>
+                            </v-btn
                             >
                         </v-toolbar>
+                        <v-divider class="mt-0"></v-divider>
+                        <h4 class="font-weight-light px-4 pt-1 text-center m-0">Price</h4>
+                        <div class="d-flex align-items-baseline justify-content-center px-4">
+                            <h4 class=" m-0">GYD</h4>
+                            <h1 class="text-danger font-weight-bold  m-0">${{ vehicle.price }}
+                                <v-icon>mdi-tag</v-icon>
+                            </h1>
+                        </div>
+                        <v-divider class="mb-0"></v-divider>
+
                         <div class="px-1 py-4 px-sm-6 py-sm-6">
                             <v-alert
                                 type="info"
                                 color="blue-grey"
                                 class="mb-3"
-                                >{{ vehicle.description }}</v-alert
+                            >{{ vehicle.description }}
+                            </v-alert
                             >
                             <v-system-bar dark>
                                 <v-subheader class="p-0"
-                                    >Advertisment</v-subheader
+                                >Advertisment
+                                </v-subheader
                                 >
                             </v-system-bar>
-                            <v-img src="/images/girlad.jpg"></v-img>
+                            <v-img src="/images/scotia_ad.jpg"></v-img>
                             <v-simple-table class="mt-3">
                                 <template v-slot:default>
                                     <tbody>
-                                        <tr>
-                                            <td>Chassis</td>
-                                            <td>{{ vehicle.chassis }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Engine Displacement (cc)</td>
-                                            <td>
-                                                {{
-                                                    vehicle.engine_displacement
-                                                }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Engine</td>
-                                            <td>{{ vehicle.engine_model }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Fuel</td>
-                                            <td>{{ vehicle.fuel }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Distance</td>
-                                            <td>
-                                                {{ vehicle.distance + "/km" }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Seats</td>
-                                            <td>{{ vehicle.seats }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Doors</td>
-                                            <td>{{ vehicle.doors }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Transmission</td>
-                                            <td>{{ vehicle.transmission }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Driving Wheels</td>
-                                            <td>
-                                                {{ vehicle.driving_wheels }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Colour</td>
-                                            <td>{{ vehicle.colour }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Steering</td>
-                                            <td>{{ vehicle.steering }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Location</td>
-                                            <td>{{ vehicle.location }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight(kg)</td>
-                                            <td>{{ vehicle.weight }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Size</td>
-                                            <td>{{ vehicle.size }}</td>
-                                        </tr>
+                                    <tr>
+                                        <td>Chassis</td>
+                                        <td>{{ vehicle.chassis }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Engine Displacement (cc)</td>
+                                        <td>
+                                            {{
+                                                vehicle.engine_displacement
+                                            }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Engine</td>
+                                        <td>{{ vehicle.engine_model }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fuel</td>
+                                        <td>{{ vehicle.fuel }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Distance</td>
+                                        <td>
+                                            {{ vehicle.distance + "/km" }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seats</td>
+                                        <td>{{ vehicle.seats }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Doors</td>
+                                        <td>{{ vehicle.doors }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transmission</td>
+                                        <td>{{ vehicle.transmission }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Driving Wheels</td>
+                                        <td>
+                                            {{ vehicle.driving_wheels }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colour</td>
+                                        <td>{{ vehicle.colour }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steering</td>
+                                        <td>{{ vehicle.steering }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Location</td>
+                                        <td>{{ vehicle.location }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight(kg)</td>
+                                        <td>{{ vehicle.weight }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Size</td>
+                                        <td>{{ vehicle.size }}</td>
+                                    </tr>
                                     </tbody>
                                 </template>
                             </v-simple-table>
@@ -217,24 +224,24 @@
                             <v-simple-table dark class="mb-3">
                                 <template v-slot:default>
                                     <thead>
-                                        <tr>
-                                            <th class="text-left">
-                                                Contact Type
-                                            </th>
-                                            <th class="text-left">
-                                                Contact Info
-                                            </th>
-                                        </tr>
+                                    <tr>
+                                        <th class="text-left">
+                                            Contact Type
+                                        </th>
+                                        <th class="text-left">
+                                            Contact Info
+                                        </th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        <tr
-                                            v-for="(contact,
+                                    <tr
+                                        v-for="(contact,
                                             i) in vehicle.contact_info"
-                                            :key="i"
-                                        >
-                                            <td>{{ contact.type }}</td>
-                                            <td>{{ contact.info }}</td>
-                                        </tr>
+                                        :key="i"
+                                    >
+                                        <td>{{ contact.type }}</td>
+                                        <td>{{ contact.info }}</td>
+                                    </tr>
                                     </tbody>
                                 </template>
                             </v-simple-table>
@@ -247,10 +254,12 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import {mapActions, mapGetters} from "vuex";
+
 export default {
-    props: { vehicle: Object, UserOwnsPost: Boolean },
-    mounted() {},
+    props: {vehicle: Object, UserOwnsPost: Boolean},
+    mounted() {
+    },
     data: () => ({
         selectedImage: 0
     }),
@@ -288,11 +297,13 @@ export default {
     padding-top: 66%;
     position: relative;
 }
+
 .image-ar-inner {
     position: absolute;
     top: 0;
     left: 0;
 }
+
 #sticky-images {
     top: 86px;
     z-index: 500;

@@ -14,7 +14,7 @@
                     tile
                     height="95vh"
                 >
-                    <div class="col-7 pt-4 pr-0 pb-0 pl-4">
+                    <div class="col-xl-7 pt-4 pr-0 pb-0 pl-4">
                         <v-toolbar
                             dense
                             flat
@@ -25,10 +25,16 @@
                                 src="/images/carvidor.svg"
                                 alt="logo"
                                 height="30px"
+                                class="cs-d-none-sm"
                             />
-                            <v-divider vertical class="my-0 mx-4"></v-divider>
+                            <v-divider
+                                vertical
+                                class="my-0 mx-4 cs-d-none-sm"
+                            ></v-divider>
                             <v-icon class="mr-1">mdi-image</v-icon>
-                            <v-toolbar-title>Images</v-toolbar-title>
+                            <v-toolbar-title class=" cs-d-none-sm"
+                                >Images</v-toolbar-title
+                            >
                             <v-spacer></v-spacer>
                             <v-subheader
                                 :class="imagesAmount > 30 ? 'text-danger' : ''"
@@ -96,7 +102,7 @@
                             </v-card>
                         </div>
                     </div>
-                    <div class="col-5 pt-4 pr-0 pb-0 pl-4">
+                    <div class="col-xl-5 pt-4 pr-0 pb-0 pl-4">
                         <v-toolbar dense flat>
                             <v-icon class="mr-1">mdi-cog</v-icon>
                             <v-toolbar-title>Specifications</v-toolbar-title>
@@ -106,7 +112,9 @@
                             >
                         </v-toolbar>
                         <div class="row pt-4 pr-0 pb-0 pl-4">
-                            <div class="col-6 pt-0 pr-4 pb-0 pl-0 m-0 d-none">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0 d-none"
+                            >
                                 <v-file-input
                                     id="ef-image-input"
                                     filled
@@ -116,7 +124,9 @@
                                     v-on:change="distributeImages($event)"
                                 ></v-file-input>
                             </div>
-                            <div class="col-6 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-combobox
                                     filled
                                     dense
@@ -127,7 +137,9 @@
                                     v-model="newVehicle.make"
                                 ></v-combobox>
                             </div>
-                            <div class="col-6 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-combobox
                                     filled
                                     dense
@@ -138,7 +150,9 @@
                                     v-model="newVehicle.model"
                                 ></v-combobox>
                             </div>
-                            <div class="col-3 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -149,7 +163,9 @@
                                     v-model="newVehicle.year"
                                 ></v-text-field>
                             </div>
-                            <div class="col-6 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -159,7 +175,9 @@
                                     v-model="newVehicle.chassis"
                                 ></v-text-field>
                             </div>
-                            <div class="col-3 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -170,7 +188,9 @@
                                     v-model="newVehicle.engine_displacement"
                                 ></v-text-field>
                             </div>
-                            <div class="col-4 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -180,7 +200,9 @@
                                     v-model="newVehicle.engine_model"
                                 ></v-text-field>
                             </div>
-                            <div class="col-4 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-select
                                     filled
                                     dense
@@ -191,7 +213,9 @@
                                     v-model="newVehicle.fuel"
                                 ></v-select>
                             </div>
-                            <div class="col-4 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -202,7 +226,9 @@
                                     v-model="newVehicle.distance"
                                 ></v-text-field>
                             </div>
-                            <div class="col-2 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -213,7 +239,9 @@
                                     v-model="newVehicle.seats"
                                 ></v-text-field>
                             </div>
-                            <div class="col-2 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -224,7 +252,9 @@
                                     v-model="newVehicle.doors"
                                 ></v-text-field>
                             </div>
-                            <div class="col-3 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-select
                                     filled
                                     dense
@@ -235,7 +265,9 @@
                                     v-model="newVehicle.transmission"
                                 ></v-select>
                             </div>
-                            <div class="col-5 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-5 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-select
                                     filled
                                     dense
@@ -246,7 +278,9 @@
                                     v-model="newVehicle.driving_wheels"
                                 ></v-select>
                             </div>
-                            <div class="col-3 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -256,7 +290,9 @@
                                     v-model="newVehicle.colour"
                                 ></v-text-field>
                             </div>
-                            <div class="col-5 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-5 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-select
                                     filled
                                     dense
@@ -267,7 +303,9 @@
                                     v-model="newVehicle.steering"
                                 ></v-select>
                             </div>
-                            <div class="col-2 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -278,7 +316,9 @@
                                     v-model="newVehicle.weight"
                                 ></v-text-field>
                             </div>
-                            <div class="col-2 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -288,7 +328,9 @@
                                     v-model="newVehicle.size"
                                 ></v-text-field>
                             </div>
-                            <div class="col-8 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-8 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -298,7 +340,9 @@
                                     v-model="newVehicle.location"
                                 ></v-text-field>
                             </div>
-                            <div class="col-4 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-select
                                     filled
                                     dense
@@ -309,7 +353,9 @@
                                     v-model="newVehicle.condition"
                                 ></v-select>
                             </div>
-                            <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-textarea
                                     filled
                                     dense
@@ -319,7 +365,9 @@
                                     v-model="newVehicle.description"
                                 ></v-textarea>
                             </div>
-                            <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
+                            <div
+                                class="col-12 col-sm-12 col-md-12 col-lg-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                            >
                                 <v-text-field
                                     filled
                                     dense
@@ -396,49 +444,59 @@
                     z-index="1201"
                     absolute
                     opacity="0.9"
-                >
-                    <v-card width="500px">
-                        <v-toolbar dense flat>
-                            <v-icon class="mr-1">mdi-mail</v-icon>
-                            <v-toolbar-title>Add Contact Info</v-toolbar-title>
-                            <v-spacer></v-spacer>
-                            <v-btn
-                                class="m-0"
-                                icon
-                                @click="showAddContact = !showAddContact"
-                                ><v-icon>mdi-close</v-icon></v-btn
-                            >
-                        </v-toolbar>
-                        <div class="row m-0 pt-4 pr-0 pb-0 pl-4">
-                            <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
-                                <v-select
-                                    filled
-                                    dense
-                                    label="Type"
-                                    :items="contactTypes"
-                                    v-model="addContactInfo.type"
-                                    :rules="contactInfoTypeRules"
-                                ></v-select>
+                    ><div
+                        style="width: 95vw;"
+                        class="d-flex justify-content-center px-4"
+                    >
+                        <v-card
+                            class="col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0"
+                            tile
+                        >
+                            <v-toolbar dense flat>
+                                <v-icon class="mr-1">mdi-mail</v-icon>
+                                <v-toolbar-title
+                                    >Add Contact Info</v-toolbar-title
+                                >
+                                <v-spacer></v-spacer>
+                                <v-btn
+                                    class="m-0"
+                                    icon
+                                    @click="showAddContact = !showAddContact"
+                                    ><v-icon>mdi-close</v-icon></v-btn
+                                >
+                            </v-toolbar>
+                            <div class="row m-0 pt-4 pr-0 pb-0 pl-4">
+                                <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
+                                    <v-select
+                                        filled
+                                        dense
+                                        label="Type"
+                                        :items="contactTypes"
+                                        v-model="addContactInfo.type"
+                                        :rules="contactInfoTypeRules"
+                                    ></v-select>
+                                </div>
+                                <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
+                                    <v-text-field
+                                        filled
+                                        dense
+                                        label="Info"
+                                        v-model="addContactInfo.info"
+                                        :rules="contactInfoInfoRules"
+                                    ></v-text-field>
+                                </div>
                             </div>
-                            <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
-                                <v-text-field
-                                    filled
-                                    dense
-                                    label="Info"
-                                    v-model="addContactInfo.info"
-                                    :rules="contactInfoInfoRules"
-                                ></v-text-field>
-                            </div>
-                        </div>
-                        <v-divider class="m-0"></v-divider>
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn tile @click="saveContactInfo()"
-                                ><v-icon>mdi-content-save</v-icon> Save</v-btn
-                            >
-                            <v-spacer></v-spacer>
-                        </v-card-actions>
-                    </v-card>
+                            <v-divider class="m-0"></v-divider>
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn tile @click="saveContactInfo()"
+                                    ><v-icon>mdi-content-save</v-icon>
+                                    Save</v-btn
+                                >
+                                <v-spacer></v-spacer>
+                            </v-card-actions>
+                        </v-card>
+                    </div>
                 </v-overlay>
             </v-slide-x-transition>
             <v-slide-x-transition leave-absolute>
@@ -448,48 +506,59 @@
                     absolute
                     opacity="0.9"
                 >
-                    <v-card width="500px">
-                        <v-toolbar dense flat>
-                            <v-icon class="mr-1">mdi-mail</v-icon>
-                            <v-toolbar-title>Edit Contact Info</v-toolbar-title>
-                            <v-spacer></v-spacer>
-                            <v-btn
-                                class="m-0"
-                                icon
-                                @click="showEditContact = !showEditContact"
-                                ><v-icon>mdi-close</v-icon></v-btn
-                            >
-                        </v-toolbar>
-                        <div class="row m-0 pt-4 pr-0 pb-0 pl-4">
-                            <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
-                                <v-select
-                                    filled
-                                    dense
-                                    label="Type"
-                                    :items="contactTypes"
-                                    v-model="editContactInfo.type"
-                                    :rules="contactInfoTypeRules"
-                                ></v-select>
+                    <div
+                        style="width: 95vw;"
+                        class="d-flex justify-content-center px-4"
+                    >
+                        <v-card
+                            class="col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0"
+                            tile
+                        >
+                            <v-toolbar dense flat>
+                                <v-icon class="mr-1">mdi-mail</v-icon>
+                                <v-toolbar-title
+                                    >Edit Contact Info</v-toolbar-title
+                                >
+                                <v-spacer></v-spacer>
+                                <v-btn
+                                    class="m-0"
+                                    icon
+                                    @click="showEditContact = !showEditContact"
+                                    ><v-icon>mdi-close</v-icon></v-btn
+                                >
+                            </v-toolbar>
+                            <div class="row m-0 pt-4 pr-0 pb-0 pl-4">
+                                <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
+                                    <v-select
+                                        filled
+                                        dense
+                                        label="Type"
+                                        :items="contactTypes"
+                                        v-model="editContactInfo.type"
+                                        :rules="contactInfoTypeRules"
+                                    ></v-select>
+                                </div>
+                                <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
+                                    <v-text-field
+                                        filled
+                                        dense
+                                        label="Info"
+                                        v-model="editContactInfo.info"
+                                        :rules="contactInfoInfoRules"
+                                    ></v-text-field>
+                                </div>
                             </div>
-                            <div class="col-12 pt-0 pr-4 pb-0 pl-0 m-0">
-                                <v-text-field
-                                    filled
-                                    dense
-                                    label="Info"
-                                    v-model="editContactInfo.info"
-                                    :rules="contactInfoInfoRules"
-                                ></v-text-field>
-                            </div>
-                        </div>
-                        <v-divider class="m-0"></v-divider>
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn tile @click="saveEditContactInfo()"
-                                ><v-icon>mdi-content-save</v-icon> Save</v-btn
-                            >
-                            <v-spacer></v-spacer>
-                        </v-card-actions>
-                    </v-card>
+                            <v-divider class="m-0"></v-divider>
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn tile @click="saveEditContactInfo()"
+                                    ><v-icon>mdi-content-save</v-icon>
+                                    Save</v-btn
+                                >
+                                <v-spacer></v-spacer>
+                            </v-card-actions>
+                        </v-card>
+                    </div>
                 </v-overlay>
             </v-slide-x-transition>
             <v-scale-transition leave-absolute>

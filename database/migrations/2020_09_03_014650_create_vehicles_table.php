@@ -25,20 +25,21 @@ class CreateVehiclesTable extends Migration
             $table->string('chassis', 80);
             $table->integer('engine_displacement');
             $table->string('engine_model', 25);
-            $table->enum('fuel', ['Petrol', 'Diesel', 'LPG', 'Electric', 'Hybrid', 'Other']);
+            $table->string('fuel');
             $table->integer('distance');
             $table->integer('seats');
             $table->integer('doors');
-            $table->enum('transmission', ['Automatic', 'Manual', 'CVT', 'Other']);
-            $table->enum('driving_wheels', ['Rear Wheel Drive', 'Front Wheel Drive', 'Four Wheel Drive', 'All Wheel Drive']);
+            $table->string('transmission');
+            $table->string('driving_wheels');
             $table->string('colour', 25);
-            $table->enum('steering', ['Left Hand Drive', 'Right Hand Drive', 'Other']);
+            $table->string('steering');
             $table->string('location', 100);
             $table->integer('weight')->nullable();
             $table->string('size', 25)->nullable();
-            $table->enum('condition', ['New', 'Foreign Used', 'Used', 'Refurbished']);
+            $table->string('condition');
             $table->string('description', 500)->nullable();
             $table->integer('price');
+            $table->string('status')->nullable();
         });
     }
 

@@ -2382,6 +2382,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
@@ -2389,6 +2412,11 @@ __webpack_require__.r(__webpack_exports__);
       Object(scroll_js__WEBPACK_IMPORTED_MODULE_0__["scrollIntoView"])(document.getElementById(id), document.body, {
         behavior: "smooth"
       });
+      setTimeout(function () {
+        Object(scroll_js__WEBPACK_IMPORTED_MODULE_0__["scrollIntoView"])(document.getElementById(id), document.body, {
+          behavior: "smooth"
+        });
+      }, 500);
     }
   }
 });
@@ -2411,6 +2439,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -2693,6 +2722,75 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3725,8 +3823,39 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.make = this.$route.query.make || "";
+  },
   data: function data() {
     return {
       showMore: false,
@@ -3890,6 +4019,83 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4725,6 +4931,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {
@@ -4806,6 +5019,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -5158,10 +5378,11 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
+    if (this.$route.query.afterlogin != "yes") return;
     this.show = this.EmailVerified;
     setTimeout(function () {
       _this.show = false;
-    }, 3000);
+    }, 100000);
   },
   data: function data() {
     return {
@@ -5221,6 +5442,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -5598,6 +5820,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5629,6 +5855,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["url"],
   name: "FrontPageSlider",
@@ -5637,8 +5934,6 @@ __webpack_require__.r(__webpack_exports__);
     return {
       items: [{
         src: "xtrail_ad.jpg"
-      }, {
-        src: "allion_ad.jpg"
       }]
     };
   }
@@ -6023,28 +6318,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     vehicle: Object
   },
-  mounted: function mounted() {
-    console.log(this.vehicle, "vehiclex");
-  },
+  mounted: function mounted() {},
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["isDarkMode"]))
 });
 
@@ -11291,7 +11570,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".fontify {\n    font-family: \"Exo\", sans-serif;\n}\n\n.crop-text {\n    white-space: nowrap;\n    overflow: hidden;\n}\n\n@media only screen and (max-width: 500px) {\n    .cs-d-none-xsm {\n        display: none;\n    }\n}\n\n@media only screen and (max-width: 768px) {\n    .cs-d-none-sm {\n        display: none;\n    }\n\n    .logo-size-sm {\n        height: 20px;\n    }\n}\n", ""]);
+exports.push([module.i, ".fontify {\n    font-family: \"Roboto\", sans-serif;\n}\n\n.crop-text {\n    white-space: nowrap;\n    overflow: hidden;\n}\n\n@media only screen and (max-width: 400px) {\n    .cs-d-none-xxsm {\n        display: none;\n    }\n}\n\n@media only screen and (max-width: 500px) {\n    .cs-d-none-xsm {\n        display: none;\n    }\n}\n\n@media only screen and (max-width: 768px) {\n    .cs-d-none-sm {\n        display: none;\n    }\n\n    .logo-size-sm {\n        height: 20px;\n    }\n}\n\n@media only screen and (max-width: 992px) {\n    .cs-d-none-md {\n        display: none;\n    }\n}\n\n@media only screen and (max-width: 1200px) {\n    .cs-d-none-lg {\n        display: none;\n    }\n}\n", ""]);
 
 // exports
 
@@ -11367,7 +11646,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#login-div {\n    height: calc(100vh - 70px - 96px);\n}\n", ""]);
+exports.push([module.i, "\n#login-div {\n    min-height: calc(100vh - 70px - 96px);\n}\n", ""]);
 
 // exports
 
@@ -11405,7 +11684,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#login-div {\n    height: calc(100vh - 70px - 96px);\n}\n", ""]);
+exports.push([module.i, "\n#login-div {\n    min-height: calc(100vh - 70px - 96px);\n}\n", ""]);
 
 // exports
 
@@ -46431,30 +46710,21 @@ var render = function() {
                                 attrs: { vertical: "" }
                               }),
                               _vm._v(" "),
-                              _c("v-toolbar-title", [
-                                _vm._v("Advertise With Us")
-                              ]),
+                              _c(
+                                "v-toolbar-title",
+                                { staticClass: "cs-d-none-xsm" },
+                                [
+                                  _vm._v(
+                                    "Advertise With Us\n                            "
+                                  )
+                                ]
+                              ),
                               _vm._v(" "),
                               _c("v-spacer"),
                               _vm._v(" "),
                               _c(
                                 "v-toolbar-items",
                                 [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      staticClass: "text-none",
-                                      attrs: { large: "", text: "" }
-                                    },
-                                    [
-                                      _c("v-icon", { staticClass: "mr-1" }, [
-                                        _vm._v("mdi-handshake")
-                                      ]),
-                                      _vm._v("Partner With Us")
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
                                   _c(
                                     "v-btn",
                                     {
@@ -46468,10 +46738,12 @@ var render = function() {
                                     },
                                     [
                                       _c("v-icon", { staticClass: "mr-1" }, [
-                                        _vm._v("mdi-card-account-phone")
+                                        _vm._v(
+                                          "mdi-card-account-phone\n                                    "
+                                        )
                                       ]),
                                       _vm._v(
-                                        "\n                                    Reach Us"
+                                        "\n                                    Reach Us\n                                "
                                       )
                                     ],
                                     1
@@ -46506,10 +46778,10 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "row m-0 col-12 col-sm-12 col-md-11 col-lg-10 p-0"
+                        "row m-0 col-12 col-sm-12 col-md-11 col-lg-10 p-0 "
                     },
                     [
-                      _c("div", { staticClass: "col-6" }, [
+                      _c("div", { staticClass: "col-12 col-lg-6 " }, [
                         _c("div", { staticClass: "d-flex" }, [
                           _c(
                             "a",
@@ -46542,12 +46814,15 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "col-6 d-flex align-items-center" },
+                        {
+                          staticClass:
+                            "col-12 col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start"
+                        },
                         [
                           _c(
                             "v-card",
                             {
-                              staticClass: "col-8 p-0",
+                              staticClass: "col-10 p-0",
                               attrs: {
                                 dark: "",
                                 color: "transparent",
@@ -46566,6 +46841,8 @@ var render = function() {
                                   }
                                 },
                                 [
+                                  _c("v-spacer", { staticClass: "d-lg-none" }),
+                                  _vm._v(" "),
                                   _c(
                                     "v-toolbar-title",
                                     [
@@ -46590,81 +46867,107 @@ var render = function() {
                               }),
                               _vm._v(" "),
                               _c(
-                                "v-list",
-                                { attrs: { color: "transparent" } },
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-100 d-flex justify-content-center justify-content-lg-start"
+                                },
                                 [
                                   _c(
-                                    "v-list-item",
-                                    { attrs: { dense: "" } },
+                                    "v-list",
+                                    { attrs: { color: "transparent" } },
                                     [
                                       _c(
-                                        "v-list-item-icon",
-                                        [_c("v-icon", [_vm._v("mdi-check")])],
+                                        "v-list-item",
+                                        { attrs: { dense: "" } },
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-check")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-list-item-title", [
+                                            _vm._v(
+                                              "\n                                            Fully Cusomizable Ad Experiences\n                                        "
+                                            )
+                                          ])
+                                        ],
                                         1
                                       ),
                                       _vm._v(" "),
-                                      _c("v-list-item-title", [
-                                        _vm._v(
-                                          "\n                                        Fully Cusomizable Ad Experiences\n                                    "
-                                        )
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item",
-                                    { attrs: { dense: "" } },
-                                    [
                                       _c(
-                                        "v-list-item-icon",
-                                        [_c("v-icon", [_vm._v("mdi-check")])],
+                                        "v-list-item",
+                                        { attrs: { dense: "" } },
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-check")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-list-item-title", [
+                                            _vm._v(
+                                              "\n                                            In Depth Feedback & Statistics\n                                        "
+                                            )
+                                          ])
+                                        ],
                                         1
                                       ),
                                       _vm._v(" "),
-                                      _c("v-list-item-title", [
-                                        _vm._v(
-                                          "\n                                        In Depth Feedback & Statistics\n                                    "
-                                        )
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item",
-                                    { attrs: { dense: "" } },
-                                    [
                                       _c(
-                                        "v-list-item-icon",
-                                        [_c("v-icon", [_vm._v("mdi-check")])],
+                                        "v-list-item",
+                                        { attrs: { dense: "" } },
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-check")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-list-item-title", [
+                                            _vm._v(
+                                              "\n                                            Global Standard Service & Support\n                                        "
+                                            )
+                                          ])
+                                        ],
                                         1
                                       ),
                                       _vm._v(" "),
-                                      _c("v-list-item-title", [
-                                        _vm._v(
-                                          "\n                                        Global Standard Service & Support\n                                    "
-                                        )
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-list-item",
-                                    { attrs: { dense: "" } },
-                                    [
                                       _c(
-                                        "v-list-item-icon",
-                                        [_c("v-icon", [_vm._v("mdi-check")])],
+                                        "v-list-item",
+                                        { attrs: { dense: "" } },
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-check")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-list-item-title", [
+                                            _vm._v(
+                                              "\n                                            Flexable Payment Terms\n                                        "
+                                            )
+                                          ])
+                                        ],
                                         1
-                                      ),
-                                      _vm._v(" "),
-                                      _c("v-list-item-title", [
-                                        _vm._v(
-                                          "\n                                        Flexable Payment Terms\n                                    "
-                                        )
-                                      ])
+                                      )
                                     ],
                                     1
                                   )
@@ -46717,7 +47020,7 @@ var render = function() {
         attrs: { id: "customizable-ad-experiences" }
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "bg-light w-100" }, [
+      _c("div", { staticClass: "bg-light w-100 px-4" }, [
         _c(
           "h1",
           { staticClass: "text-center mt-12 font-weight-light" },
@@ -46725,7 +47028,9 @@ var render = function() {
             _c("v-icon", { attrs: { color: "blue", size: "50" } }, [
               _vm._v("mdi-bullhorn")
             ]),
-            _vm._v(" Fully\n            Customizable Ad Experiences\n        ")
+            _vm._v(
+              "\n            Fully\n            Customizable Ad Experiences\n        "
+            )
           ],
           1
         ),
@@ -46749,7 +47054,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-5 d-flex justify-content-center align-items-center"
+                    "col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center"
                 },
                 [
                   _c(
@@ -46794,120 +47099,160 @@ var render = function() {
                       _c("v-divider", { staticClass: "m-0" }),
                       _vm._v(" "),
                       _c(
-                        "v-list",
-                        { attrs: { color: "transparent" } },
+                        "div",
+                        {
+                          staticClass:
+                            "d-flex justify-content-center justify-content-lg-center justify-content-xl-start"
+                        },
                         [
                           _c(
-                            "v-list-item",
-                            { attrs: { dense: "" } },
+                            "v-list",
+                            { attrs: { color: "transparent" } },
                             [
                               _c(
-                                "v-list-item-icon",
+                                "v-list-item",
+                                { attrs: { dense: "" } },
                                 [
-                                  _c("v-icon", { attrs: { color: "blue" } }, [
-                                    _vm._v("mdi-circle-small")
+                                  _c(
+                                    "v-list-item-icon",
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        { attrs: { color: "blue" } },
+                                        [
+                                          _vm._v(
+                                            "mdi-circle-small\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-list-item-title", [
+                                    _vm._v(
+                                      "Advertise on regular ad slots.\n                                    "
+                                    )
                                   ])
                                 ],
                                 1
                               ),
                               _vm._v(" "),
-                              _c("v-list-item-title", [
-                                _vm._v(
-                                  "Advertise on regular ad slots.\n                                "
-                                )
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item",
-                            { attrs: { dense: "" } },
-                            [
                               _c(
-                                "v-list-item-icon",
+                                "v-list-item",
+                                { attrs: { dense: "" } },
                                 [
-                                  _c("v-icon", { attrs: { color: "blue" } }, [
-                                    _vm._v("mdi-circle-small")
+                                  _c(
+                                    "v-list-item-icon",
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        { attrs: { color: "blue" } },
+                                        [
+                                          _vm._v(
+                                            "mdi-circle-small\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-list-item-title", [
+                                    _vm._v(
+                                      "Choose the pages you appear on.\n                                    "
+                                    )
                                   ])
                                 ],
                                 1
                               ),
                               _vm._v(" "),
-                              _c("v-list-item-title", [
-                                _vm._v(
-                                  "Choose the pages you appear on.\n                                "
-                                )
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item",
-                            { attrs: { dense: "" } },
-                            [
                               _c(
-                                "v-list-item-icon",
+                                "v-list-item",
+                                { attrs: { dense: "" } },
                                 [
-                                  _c("v-icon", { attrs: { color: "blue" } }, [
-                                    _vm._v("mdi-circle-small")
+                                  _c(
+                                    "v-list-item-icon",
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        { attrs: { color: "blue" } },
+                                        [
+                                          _vm._v(
+                                            "mdi-circle-small\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-list-item-title", [
+                                    _vm._v(
+                                      "Choose where to redirect potential\n                                        customers.\n                                    "
+                                    )
                                   ])
                                 ],
                                 1
                               ),
                               _vm._v(" "),
-                              _c("v-list-item-title", [
-                                _vm._v(
-                                  "Choose where to redirect potential\n                                    customers.\n                                "
-                                )
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item",
-                            { attrs: { dense: "" } },
-                            [
                               _c(
-                                "v-list-item-icon",
+                                "v-list-item",
+                                { attrs: { dense: "" } },
                                 [
-                                  _c("v-icon", { attrs: { color: "blue" } }, [
-                                    _vm._v("mdi-circle-small")
+                                  _c(
+                                    "v-list-item-icon",
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        { attrs: { color: "blue" } },
+                                        [
+                                          _vm._v(
+                                            "mdi-circle-small\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-list-item-title", [
+                                    _vm._v(
+                                      "\n                                        Host your promotions on our site.\n                                    "
+                                    )
                                   ])
                                 ],
                                 1
                               ),
                               _vm._v(" "),
-                              _c("v-list-item-title", [
-                                _vm._v(
-                                  "\n                                    Host your promotions on our site.\n                                "
-                                )
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item",
-                            { attrs: { dense: "" } },
-                            [
                               _c(
-                                "v-list-item-icon",
+                                "v-list-item",
+                                { attrs: { dense: "" } },
                                 [
-                                  _c("v-icon", { attrs: { color: "blue" } }, [
-                                    _vm._v("mdi-circle-small")
+                                  _c(
+                                    "v-list-item-icon",
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        { attrs: { color: "blue" } },
+                                        [
+                                          _vm._v(
+                                            "mdi-circle-small\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-list-item-title", [
+                                    _vm._v(
+                                      "\n                                        Do Much More...\n                                    "
+                                    )
                                   ])
                                 ],
                                 1
-                              ),
-                              _vm._v(" "),
-                              _c("v-list-item-title", [
-                                _vm._v(
-                                  "\n                                    Do Much More...\n                                "
-                                )
-                              ])
+                              )
                             ],
                             1
                           )
@@ -46935,7 +47280,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "col-7" },
+                { staticClass: "col-12 col-md-12 col-xl-7" },
                 [
                   _c("v-img", {
                     attrs: { src: "/images/undraw/undraw_online_ad.svg" }
@@ -46948,7 +47293,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "bg-white w-100 pt-12" }, [
+      _c("div", { staticClass: "bg-white w-100 pt-12 px-4" }, [
         _c(
           "h1",
           { staticClass: "text-center font-weight-light" },
@@ -46956,7 +47301,9 @@ var render = function() {
             _c("v-icon", { attrs: { color: "blue", size: "50" } }, [
               _vm._v("mdi-chart-box")
             ]),
-            _vm._v(" In Depth\n            Feedback & Statistics\n        ")
+            _vm._v(
+              "\n            In Depth\n            Feedback & Statistics\n        "
+            )
           ],
           1
         ),
@@ -46978,7 +47325,7 @@ var render = function() {
             [
               _c(
                 "div",
-                { staticClass: "col-7" },
+                { staticClass: "col-12 col-md-12 col-xl-7" },
                 [
                   _c("v-img", {
                     attrs: { src: "/images/undraw/undraw_Marketing.svg" }
@@ -46991,7 +47338,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-5 d-flex justify-content-center align-items-center"
+                    "col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center"
                 },
                 [
                   _c(
@@ -47042,7 +47389,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "bg-light w-100 pt-12" }, [
+      _c("div", { staticClass: "bg-light w-100 pt-12 px-4" }, [
         _c(
           "h1",
           { staticClass: "text-center font-weight-light" },
@@ -47050,7 +47397,9 @@ var render = function() {
             _c("v-icon", { attrs: { color: "blue", size: "50" } }, [
               _vm._v("mdi-lifebuoy")
             ]),
-            _vm._v("Global\n            Standard Service & Support\n        ")
+            _vm._v(
+              "\n            Global\n            Standard Service & Support\n        "
+            )
           ],
           1
         ),
@@ -47074,7 +47423,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-5 d-flex justify-content-center align-items-center"
+                    "col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center"
                 },
                 [
                   _c(
@@ -47116,7 +47465,7 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "col-7" },
+                { staticClass: "col-12 col-md-12 col-xl-7" },
                 [
                   _c("v-img", {
                     attrs: {
@@ -47133,7 +47482,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "bg-white w-100 pt-12", attrs: { id: "reach-us" } },
+        { staticClass: "bg-white w-100 pt-12 px-4", attrs: { id: "reach-us" } },
         [
           _c(
             "h1",
@@ -47142,7 +47491,7 @@ var render = function() {
               _c("v-icon", { attrs: { color: "blue", size: "50" } }, [
                 _vm._v("mdi-phone")
               ]),
-              _vm._v("Reach Us\n        ")
+              _vm._v("\n            Reach Us\n        ")
             ],
             1
           ),
@@ -47164,12 +47513,16 @@ var render = function() {
               [
                 _c(
                   "div",
-                  { staticClass: "col-6 d-flex justify-content-end" },
+                  {
+                    staticClass:
+                      "col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center justify-content-xl-end"
+                  },
                   [
                     _c(
                       "v-card",
                       {
-                        staticClass: "col-7 p-0",
+                        staticClass:
+                          "col-12 col-sm-7 col-lg-8 col-xl-10 p-0 p-0",
                         attrs: { tile: "", outlined: "" }
                       },
                       [
@@ -47217,7 +47570,9 @@ var render = function() {
                               { attrs: { dark: "", color: "blue" } },
                               [
                                 _c("v-icon", [_vm._v("mdi-send")]),
-                                _vm._v(" Submit")
+                                _vm._v(
+                                  "\n                                Submit\n                            "
+                                )
                               ],
                               1
                             ),
@@ -47237,13 +47592,13 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      "col-6 d-flex justify-content-start align-items-center"
+                      "col-12 col-md-12 col-xl-5 d-flex justify-content-center align-items-center justify-content-xl-start"
                   },
                   [
                     _c(
                       "v-card",
                       {
-                        staticClass: "col-7 p-0",
+                        staticClass: "col-12 col-lg-9 p-0",
                         attrs: {
                           light: "",
                           color: "transparent",
@@ -47258,6 +47613,8 @@ var render = function() {
                             attrs: { flat: "", dense: "", color: "transparent" }
                           },
                           [
+                            _c("v-spacer", { staticClass: "d-xl-none" }),
+                            _vm._v(" "),
                             _c(
                               "v-toolbar-title",
                               { staticClass: "font-weight-bold" },
@@ -47280,51 +47637,65 @@ var render = function() {
                         _c("v-divider", { staticClass: "m-0" }),
                         _vm._v(" "),
                         _c(
-                          "v-list",
-                          { attrs: { color: "transparent" } },
+                          "div",
+                          {
+                            staticClass:
+                              "d-flex justify-content-center justify-content-lg-center justify-content-xl-start"
+                          },
                           [
                             _c(
-                              "v-list-item",
-                              { attrs: { dense: "" } },
+                              "v-list",
+                              { attrs: { color: "transparent" } },
                               [
                                 _c(
-                                  "v-list-item-icon",
+                                  "v-list-item",
+                                  { attrs: { dense: "" } },
                                   [
-                                    _c("v-icon", { attrs: { color: "blue" } }, [
-                                      _vm._v("mdi-phone")
+                                    _c(
+                                      "v-list-item-icon",
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          { attrs: { color: "blue" } },
+                                          [_vm._v("mdi-phone")]
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("v-list-item-title", [
+                                      _vm._v(
+                                        "\n                                        (592) 611-7899\n                                    "
+                                      )
                                     ])
                                   ],
                                   1
                                 ),
                                 _vm._v(" "),
-                                _c("v-list-item-title", [
-                                  _vm._v(
-                                    "\n                                    (592) 611-7899\n                                "
-                                  )
-                                ])
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "v-list-item",
-                              { attrs: { dense: "" } },
-                              [
                                 _c(
-                                  "v-list-item-icon",
+                                  "v-list-item",
+                                  { attrs: { dense: "" } },
                                   [
-                                    _c("v-icon", { attrs: { color: "blue" } }, [
-                                      _vm._v("mdi-email")
+                                    _c(
+                                      "v-list-item-icon",
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          { attrs: { color: "blue" } },
+                                          [_vm._v("mdi-email")]
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("v-list-item-title", [
+                                      _vm._v(
+                                        "\n                                        ksbeats123@gmail.com\n                                    "
+                                      )
                                     ])
                                   ],
                                   1
-                                ),
-                                _vm._v(" "),
-                                _c("v-list-item-title", [
-                                  _vm._v(
-                                    "\n                                    ksbeats123@gmail.com\n                                "
-                                  )
-                                ])
+                                )
                               ],
                               1
                             )
@@ -47332,11 +47703,15 @@ var render = function() {
                           1
                         ),
                         _vm._v(" "),
-                        _c("v-card-text", [
-                          _vm._v(
-                            "\n                            Available from 09:00 to 17:00 Monday - Friday.\n                        "
-                          )
-                        ])
+                        _c(
+                          "v-card-text",
+                          { staticClass: "text-sm-center text-lg-left" },
+                          [
+                            _vm._v(
+                              "\n                            Available from 09:00 to 17:00 Monday - Friday.\n                        "
+                            )
+                          ]
+                        )
                       ],
                       1
                     )
@@ -47415,6 +47790,7 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("img", {
+                    staticClass: "cs-d-none-md",
                     attrs: {
                       src: "/images/guyana_flag.svg",
                       alt: "Guyana's Flag",
@@ -47422,16 +47798,19 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c("h6", { staticClass: "m-0 ml-1" }, [_vm._v("Guyana")]),
+                  _c("h6", { staticClass: "m-0 ml-1 cs-d-none-md" }, [
+                    _vm._v("Guyana")
+                  ]),
                   _vm._v(" "),
                   _c("v-divider", {
-                    staticClass: "my-0 mx-5",
+                    staticClass: "my-0 mx-5 cs-d-none-md",
                     attrs: { dark: "", vertical: "" }
                   }),
                   _vm._v(" "),
                   _c(
                     "v-btn",
                     {
+                      staticClass: "cs-d-none-xsm",
                       attrs: { icon: "" },
                       on: {
                         click: function($event) {
@@ -47446,6 +47825,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
+                      staticClass: "cs-d-none-xsm",
                       attrs: { icon: "" },
                       on: {
                         click: function($event) {
@@ -47459,12 +47839,14 @@ var render = function() {
                   _vm._v(" "),
                   _c(
                     "v-toolbar-items",
+                    { staticClass: "cs-d-none-sm" },
                     [
                       _c(
                         "v-btn",
                         {
-                          staticClass: "text-none cs-d-none-xsm",
-                          attrs: { text: "" }
+                          staticClass:
+                            "text-none text-decoration-none cs-d-none-xsm",
+                          attrs: { text: "", href: "/advertise" }
                         },
                         [
                           _c(
@@ -47473,7 +47855,7 @@ var render = function() {
                             [
                               _c("v-icon", [_vm._v("mdi-handshake")]),
                               _vm._v(
-                                "\n                            Partner With Us\n                        "
+                                "\n                            Advertise\n                        "
                               )
                             ],
                             1
@@ -47533,6 +47915,7 @@ var render = function() {
                   _c(
                     "v-btn",
                     {
+                      staticClass: "cs-d-none-xxsm",
                       attrs: { icon: "" },
                       on: {
                         click: function($event) {
@@ -47580,7 +47963,8 @@ var render = function() {
                                 ? _c(
                                     "a",
                                     {
-                                      staticClass: "text-decoration-none",
+                                      staticClass:
+                                        "text-decoration-none cs-d-none-sm",
                                       attrs: {
                                         href:
                                           _vm.url + "/vehicle/u/" + _vm.UserId
@@ -47849,7 +48233,7 @@ var render = function() {
                     [
                       _c(
                         "div",
-                        { staticClass: "col-7 pt-4 pr-0 pb-0 pl-4" },
+                        { staticClass: "col-xl-7 pt-4 pr-0 pb-0 pl-4" },
                         [
                           _c(
                             "v-toolbar",
@@ -47860,6 +48244,7 @@ var render = function() {
                             },
                             [
                               _c("img", {
+                                staticClass: "cs-d-none-sm",
                                 attrs: {
                                   src: "/images/carvidor.svg",
                                   alt: "logo",
@@ -47868,7 +48253,7 @@ var render = function() {
                               }),
                               _vm._v(" "),
                               _c("v-divider", {
-                                staticClass: "my-0 mx-4",
+                                staticClass: "my-0 mx-4 cs-d-none-sm",
                                 attrs: { vertical: "" }
                               }),
                               _vm._v(" "),
@@ -47876,7 +48261,11 @@ var render = function() {
                                 _vm._v("mdi-image")
                               ]),
                               _vm._v(" "),
-                              _c("v-toolbar-title", [_vm._v("Images")]),
+                              _c(
+                                "v-toolbar-title",
+                                { staticClass: " cs-d-none-sm" },
+                                [_vm._v("Images")]
+                              ),
                               _vm._v(" "),
                               _c("v-spacer"),
                               _vm._v(" "),
@@ -48056,7 +48445,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "col-5 pt-4 pr-0 pb-0 pl-4" },
+                        { staticClass: "col-xl-5 pt-4 pr-0 pb-0 pl-4" },
                         [
                           _c(
                             "v-toolbar",
@@ -48096,7 +48485,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "col-6 pt-0 pr-4 pb-0 pl-0 m-0 d-none"
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0 d-none"
                                 },
                                 [
                                   _c("v-file-input", {
@@ -48120,7 +48509,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-combobox", {
@@ -48147,7 +48537,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-combobox", {
@@ -48174,7 +48565,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48201,7 +48593,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48227,7 +48620,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48260,7 +48654,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48290,7 +48685,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -48317,7 +48713,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48348,7 +48745,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48375,7 +48773,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48402,7 +48801,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -48433,7 +48833,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-5 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-5 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -48465,7 +48866,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48491,7 +48893,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-5 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-5 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -48522,7 +48925,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48549,7 +48953,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48575,7 +48980,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-8 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-8 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48605,7 +49011,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -48636,7 +49043,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-12 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-textarea", {
@@ -48666,7 +49074,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-12 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -48835,143 +49244,160 @@ var render = function() {
                         },
                         [
                           _c(
-                            "v-card",
-                            { attrs: { width: "500px" } },
+                            "div",
+                            {
+                              staticClass: "d-flex justify-content-center px-4",
+                              staticStyle: { width: "95vw" }
+                            },
                             [
                               _c(
-                                "v-toolbar",
-                                { attrs: { dense: "", flat: "" } },
-                                [
-                                  _c("v-icon", { staticClass: "mr-1" }, [
-                                    _vm._v("mdi-mail")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-toolbar-title", [
-                                    _vm._v("Add Contact Info")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      staticClass: "m-0",
-                                      attrs: { icon: "" },
-                                      on: {
-                                        click: function($event) {
-                                          _vm.showAddContact = !_vm.showAddContact
-                                        }
-                                      }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-close")])],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4" },
+                                "v-card",
+                                {
+                                  staticClass:
+                                    "col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0",
+                                  attrs: { tile: "" }
+                                },
                                 [
                                   _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
+                                    "v-toolbar",
+                                    { attrs: { dense: "", flat: "" } },
                                     [
-                                      _c("v-select", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Type",
-                                          items: _vm.contactTypes,
-                                          rules: _vm.contactInfoTypeRules
-                                        },
-                                        model: {
-                                          value: _vm.addContactInfo.type,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.addContactInfo,
-                                              "type",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "addContactInfo.type"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
-                                    [
-                                      _c("v-text-field", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Info",
-                                          rules: _vm.contactInfoInfoRules
-                                        },
-                                        model: {
-                                          value: _vm.addContactInfo.info,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.addContactInfo,
-                                              "info",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "addContactInfo.info"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("v-divider", { staticClass: "m-0" }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { tile: "" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.saveContactInfo()
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("v-icon", [
-                                        _vm._v("mdi-content-save")
+                                      _c("v-icon", { staticClass: "mr-1" }, [
+                                        _vm._v("mdi-mail")
                                       ]),
-                                      _vm._v(" Save")
+                                      _vm._v(" "),
+                                      _c("v-toolbar-title", [
+                                        _vm._v("Add Contact Info")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "m-0",
+                                          attrs: { icon: "" },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.showAddContact = !_vm.showAddContact
+                                            }
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-close")])],
+                                        1
+                                      )
                                     ],
                                     1
                                   ),
                                   _vm._v(" "),
-                                  _c("v-spacer")
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-select", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Type",
+                                              items: _vm.contactTypes,
+                                              rules: _vm.contactInfoTypeRules
+                                            },
+                                            model: {
+                                              value: _vm.addContactInfo.type,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.addContactInfo,
+                                                  "type",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "addContactInfo.type"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Info",
+                                              rules: _vm.contactInfoInfoRules
+                                            },
+                                            model: {
+                                              value: _vm.addContactInfo.info,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.addContactInfo,
+                                                  "info",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "addContactInfo.info"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-divider", { staticClass: "m-0" }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: { tile: "" },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.saveContactInfo()
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-content-save")
+                                          ]),
+                                          _vm._v(
+                                            "\n                                Save"
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-spacer")
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
                             ],
                             1
                           )
-                        ],
-                        1
+                        ]
                       )
                     : _vm._e()
                 ],
@@ -48994,143 +49420,160 @@ var render = function() {
                         },
                         [
                           _c(
-                            "v-card",
-                            { attrs: { width: "500px" } },
+                            "div",
+                            {
+                              staticClass: "d-flex justify-content-center px-4",
+                              staticStyle: { width: "95vw" }
+                            },
                             [
                               _c(
-                                "v-toolbar",
-                                { attrs: { dense: "", flat: "" } },
-                                [
-                                  _c("v-icon", { staticClass: "mr-1" }, [
-                                    _vm._v("mdi-mail")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-toolbar-title", [
-                                    _vm._v("Edit Contact Info")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      staticClass: "m-0",
-                                      attrs: { icon: "" },
-                                      on: {
-                                        click: function($event) {
-                                          _vm.showEditContact = !_vm.showEditContact
-                                        }
-                                      }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-close")])],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4" },
+                                "v-card",
+                                {
+                                  staticClass:
+                                    "col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0",
+                                  attrs: { tile: "" }
+                                },
                                 [
                                   _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
+                                    "v-toolbar",
+                                    { attrs: { dense: "", flat: "" } },
                                     [
-                                      _c("v-select", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Type",
-                                          items: _vm.contactTypes,
-                                          rules: _vm.contactInfoTypeRules
-                                        },
-                                        model: {
-                                          value: _vm.editContactInfo.type,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.editContactInfo,
-                                              "type",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "editContactInfo.type"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
-                                    [
-                                      _c("v-text-field", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Info",
-                                          rules: _vm.contactInfoInfoRules
-                                        },
-                                        model: {
-                                          value: _vm.editContactInfo.info,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.editContactInfo,
-                                              "info",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "editContactInfo.info"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("v-divider", { staticClass: "m-0" }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { tile: "" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.saveEditContactInfo()
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("v-icon", [
-                                        _vm._v("mdi-content-save")
+                                      _c("v-icon", { staticClass: "mr-1" }, [
+                                        _vm._v("mdi-mail")
                                       ]),
-                                      _vm._v(" Save")
+                                      _vm._v(" "),
+                                      _c("v-toolbar-title", [
+                                        _vm._v("Edit Contact Info")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "m-0",
+                                          attrs: { icon: "" },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.showEditContact = !_vm.showEditContact
+                                            }
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-close")])],
+                                        1
+                                      )
                                     ],
                                     1
                                   ),
                                   _vm._v(" "),
-                                  _c("v-spacer")
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-select", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Type",
+                                              items: _vm.contactTypes,
+                                              rules: _vm.contactInfoTypeRules
+                                            },
+                                            model: {
+                                              value: _vm.editContactInfo.type,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.editContactInfo,
+                                                  "type",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "editContactInfo.type"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Info",
+                                              rules: _vm.contactInfoInfoRules
+                                            },
+                                            model: {
+                                              value: _vm.editContactInfo.info,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.editContactInfo,
+                                                  "info",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "editContactInfo.info"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-divider", { staticClass: "m-0" }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: { tile: "" },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.saveEditContactInfo()
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-content-save")
+                                          ]),
+                                          _vm._v(
+                                            "\n                                Save"
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-spacer")
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
                             ],
                             1
                           )
-                        ],
-                        1
+                        ]
                       )
                     : _vm._e()
                 ],
@@ -49198,387 +49641,424 @@ var render = function() {
             },
             [
               _c(
-                "v-card",
-                { attrs: { width: "500", tile: "" } },
+                "div",
+                {
+                  staticClass: "d-flex justify-content-center px-4",
+                  staticStyle: { width: "95vw" }
+                },
                 [
                   _c(
-                    "v-toolbar",
-                    { attrs: { dense: "", flat: "" } },
-                    [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/carvidor.svg",
-                          alt: "logo",
-                          height: "30px"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("v-toolbar-title", { staticClass: "ml-3" }, [
-                        _vm._v("Filter Vehicles")
-                      ]),
-                      _vm._v(" "),
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "v-btn",
-                        {
-                          attrs: { icon: "" },
-                          on: {
-                            click: function($event) {
-                              return _vm.toggleFilter()
-                            }
-                          }
-                        },
-                        [_c("v-icon", [_vm._v("mdi-close")])],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "form",
+                    "v-card",
                     {
-                      staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4",
-                      staticStyle: { "max-height": "75vh", overflow: "auto" },
-                      attrs: {
-                        id: "filter-form",
-                        action: "/vehicle/filter",
-                        method: "GET"
-                      }
+                      staticClass:
+                        "col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0",
+                      attrs: { tile: "" }
                     },
                     [
                       _c(
-                        "div",
-                        { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                        "v-toolbar",
+                        { attrs: { dense: "", flat: "" } },
                         [
-                          _c("v-select", {
+                          _c("img", {
                             attrs: {
-                              dense: "",
-                              filled: "",
-                              label: "Make",
-                              name: "make",
-                              items: _vm.convertedMakeModels
-                            },
-                            model: {
-                              value: _vm.make,
-                              callback: function($$v) {
-                                _vm.make = $$v
-                              },
-                              expression: "make"
+                              src: "/images/carvidor.svg",
+                              alt: "logo",
+                              height: "30px"
                             }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                        [
-                          _c("v-select", {
-                            attrs: {
-                              dense: "",
-                              filled: "",
-                              label: "Model",
-                              name: "model",
-                              items: _vm.models
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              dense: "",
-                              filled: "",
-                              label: "From Year",
-                              name: "min_year",
-                              type: "number"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              dense: "",
-                              filled: "",
-                              label: "To Year",
-                              name: "max_year",
-                              type: "number"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-12 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "Steering",
-                                  name: "steering",
-                                  items: _vm.options.steering
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-text-field", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "From (cc)",
-                                  name: "min_cc",
-                                  type: "number"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-text-field", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "To (cc)",
-                                  name: "max_cc",
-                                  type: "number"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-7 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "Drive",
-                                  name: "drive",
-                                  items: _vm.options.driving_wheels
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-5 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "Transmission",
-                                  name: "transmission",
-                                  items: _vm.options.transmission
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-text-field", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "From km",
-                                  name: "min_km",
-                                  type: "number"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-text-field", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "Max km",
-                                  name: "max_km",
-                                  type: "number"
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-5 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "Fuel",
-                                  name: "fuel",
-                                  items: _vm.options.fuel
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.showMore
-                        ? _c(
-                            "div",
-                            { staticClass: "col-7 pt-0 pr-4 pb-0 pl-0" },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  dense: "",
-                                  filled: "",
-                                  label: "Condition",
-                                  name: "contition",
-                                  items: _vm.options.condition
-                                }
-                              })
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-5 pt-0 pr-4 pb-0 pl-0" },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              dense: "",
-                              filled: "",
-                              label: "From Price (GYD)",
-                              name: "min_price",
-                              type: "number"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "col-7 pt-0 pr-4 pb-0 pl-0" },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              dense: "",
-                              filled: "",
-                              label: "To Price (GYD)",
-                              name: "max_price",
-                              type: "number"
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("v-divider", { staticClass: "m-0" }),
-                  _vm._v(" "),
-                  _c(
-                    "v-card-actions",
-                    [
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "v-btn",
-                        {
-                          staticClass: "mr-1",
-                          attrs: { text: "" },
-                          on: {
-                            click: function($event) {
-                              _vm.showMore = !_vm.showMore
-                            }
-                          }
-                        },
-                        [
-                          _c("v-icon", [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(
-                                  _vm.showMore
-                                    ? "mdi-arrow-up"
-                                    : "mdi-arrow-down"
-                                )
-                            )
+                          }),
+                          _vm._v(" "),
+                          _c("v-toolbar-title", { staticClass: "ml-3" }, [
+                            _vm._v("Filter Vehicles\n                    ")
                           ]),
-                          _vm._v(
-                            "\n                    " +
-                              _vm._s(_vm.showMore ? "Less" : "More")
+                          _vm._v(" "),
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { icon: "" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.toggleFilter()
+                                }
+                              }
+                            },
+                            [_c("v-icon", [_vm._v("mdi-close")])],
+                            1
                           )
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "v-btn",
+                        "form",
                         {
-                          on: {
-                            click: function($event) {
-                              return _vm.submitForm()
-                            }
+                          staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4",
+                          staticStyle: {
+                            "max-height": "75vh",
+                            overflow: "auto"
+                          },
+                          attrs: {
+                            id: "filter-form",
+                            action: "/vehicle/filter",
+                            method: "GET"
                           }
                         },
                         [
-                          _c("v-icon", [_vm._v("mdi-filter")]),
-                          _vm._v(" Filter")
+                          _c(
+                            "div",
+                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                            [
+                              _c("v-combobox", {
+                                attrs: {
+                                  dense: "",
+                                  filled: "",
+                                  label: "Make",
+                                  name: "make",
+                                  items: _vm.convertedMakeModels,
+                                  value: this.$route.query.make || ""
+                                },
+                                model: {
+                                  value: _vm.make,
+                                  callback: function($$v) {
+                                    _vm.make = $$v
+                                  },
+                                  expression: "make"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                            [
+                              _c("v-combobox", {
+                                attrs: {
+                                  dense: "",
+                                  filled: "",
+                                  label: "Model",
+                                  name: "model",
+                                  items: _vm.models,
+                                  value: this.$route.query.model || ""
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  dense: "",
+                                  filled: "",
+                                  label: "From Year",
+                                  name: "min_year",
+                                  type: "number",
+                                  value: this.$route.query.min_year || ""
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  dense: "",
+                                  filled: "",
+                                  label: "To Year",
+                                  name: "max_year",
+                                  type: "number",
+                                  value: this.$route.query.max_year || ""
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-12 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "Steering",
+                                      name: "steering",
+                                      items: _vm.options.steering,
+                                      value: this.$route.query.steering || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "From (cc)",
+                                      name: "min_cc",
+                                      type: "number",
+                                      value: this.$route.query.min_cc || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "To (cc)",
+                                      name: "max_cc",
+                                      type: "number",
+                                      value: this.$route.query.max_cc || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-7 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "Drive",
+                                      name: "drive",
+                                      items: _vm.options.driving_wheels,
+                                      value: this.$route.query.drive || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-5 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "Transmission",
+                                      name: "transmission",
+                                      items: _vm.options.transmission,
+                                      value:
+                                        this.$route.query.transmission || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "From km",
+                                      name: "min_km",
+                                      type: "number",
+                                      value: this.$route.query.min_km || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-6 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-text-field", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "Max km",
+                                      name: "max_km",
+                                      type: "number",
+                                      value: this.$route.query.max_km || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-5 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "Fuel",
+                                      name: "fuel",
+                                      items: _vm.options.fuel,
+                                      value: this.$route.query.fuel || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm.showMore
+                            ? _c(
+                                "div",
+                                { staticClass: "col-7 pt-0 pr-4 pb-0 pl-0" },
+                                [
+                                  _c("v-select", {
+                                    attrs: {
+                                      dense: "",
+                                      filled: "",
+                                      label: "Condition",
+                                      name: "condition",
+                                      items: _vm.options.condition,
+                                      value: this.$route.query.condition || ""
+                                    }
+                                  })
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-5 pt-0 pr-4 pb-0 pl-0" },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  dense: "",
+                                  filled: "",
+                                  label: "From Price (GYD)",
+                                  name: "min_price",
+                                  type: "number",
+                                  value: this.$route.query.min_price || ""
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "col-7 pt-0 pr-4 pb-0 pl-0" },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  dense: "",
+                                  filled: "",
+                                  label: "To Price (GYD)",
+                                  name: "max_price",
+                                  type: "number",
+                                  value: this.$route.query.max_price || ""
+                                }
+                              })
+                            ],
+                            1
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("v-divider", { staticClass: "m-0" }),
+                      _vm._v(" "),
+                      _c(
+                        "v-card-actions",
+                        [
+                          _c("v-spacer"),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              staticClass: "mr-1",
+                              attrs: { text: "" },
+                              on: {
+                                click: function($event) {
+                                  _vm.showMore = !_vm.showMore
+                                }
+                              }
+                            },
+                            [
+                              _c("v-icon", [
+                                _vm._v(
+                                  "\n                            " +
+                                    _vm._s(
+                                      _vm.showMore
+                                        ? "mdi-arrow-up"
+                                        : "mdi-arrow-down"
+                                    ) +
+                                    "\n                        "
+                                )
+                              ]),
+                              _vm._v(
+                                "\n                        " +
+                                  _vm._s(_vm.showMore ? "Less" : "More") +
+                                  "\n                    "
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-btn",
+                            {
+                              on: {
+                                click: function($event) {
+                                  return _vm.submitForm()
+                                }
+                              }
+                            },
+                            [
+                              _c("v-icon", [_vm._v("mdi-filter")]),
+                              _vm._v(
+                                "\n                        Filter\n                    "
+                              )
+                            ],
+                            1
+                          )
                         ],
                         1
                       )
@@ -49588,8 +50068,7 @@ var render = function() {
                 ],
                 1
               )
-            ],
-            1
+            ]
           )
         : _vm._e()
     ],
@@ -49622,7 +50101,7 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "w-100 d-flex justify-content-center",
+        staticClass: "w-100 d-flex align-items-center justify-content-center",
         attrs: { id: "login-div" }
       },
       [
@@ -49635,7 +50114,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-6 pt-0 pr-7 pb-4 pl-0 d-flex justify-content-center align-items-center"
+                    "col-12 col-md-4 col-lg-6 pt-0 pr-7 pb-4 pl-0 d-flex justify-content-center align-items-center"
                 },
                 [
                   _c("img", {
@@ -49654,12 +50133,15 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-6 pt-0 pr-4 pb-4 pl-0 d-flex justify-content-start"
+                    "col-12 col-md-8 col-lg-6 pt-0 pr-4 pb-4 pl-0 d-flex justify-content-center justify-content-lg-start"
                 },
                 [
                   _c(
                     "v-card",
-                    { staticClass: "col-7 p-0", attrs: { dark: "", tile: "" } },
+                    {
+                      staticClass: "col-lg-7 col-md-8 p-0",
+                      attrs: { dark: "", tile: "" }
+                    },
                     [
                       _c(
                         "v-toolbar",
@@ -49819,7 +50301,7 @@ var render = function() {
                     [
                       _c(
                         "div",
-                        { staticClass: "col-7 pt-4 pr-0 pb-0 pl-4" },
+                        { staticClass: "col-xl-7 pt-4 pr-0 pb-0 pl-4" },
                         [
                           _c(
                             "v-toolbar",
@@ -49830,6 +50312,7 @@ var render = function() {
                             },
                             [
                               _c("img", {
+                                staticClass: "cs-d-none-sm",
                                 attrs: {
                                   src: "/images/carvidor.svg",
                                   alt: "logo",
@@ -49838,7 +50321,7 @@ var render = function() {
                               }),
                               _vm._v(" "),
                               _c("v-divider", {
-                                staticClass: "my-0 mx-4",
+                                staticClass: "my-0 mx-4 cs-d-none-sm",
                                 attrs: { vertical: "" }
                               }),
                               _vm._v(" "),
@@ -49846,7 +50329,11 @@ var render = function() {
                                 _vm._v("mdi-image")
                               ]),
                               _vm._v(" "),
-                              _c("v-toolbar-title", [_vm._v("Images")]),
+                              _c(
+                                "v-toolbar-title",
+                                { staticClass: " cs-d-none-sm" },
+                                [_vm._v("Images")]
+                              ),
                               _vm._v(" "),
                               _c("v-spacer"),
                               _vm._v(" "),
@@ -49862,7 +50349,7 @@ var render = function() {
                                       "Max 30 Images. " +
                                         _vm.imagesAmount +
                                         " Selected."
-                                    )
+                                    ) + "\n                        "
                                   )
                                 ]
                               ),
@@ -49950,7 +50437,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "col-5 pt-4 pr-0 pb-0 pl-4" },
+                        { staticClass: "col-xl-5 pt-4 pr-0 pb-0 pl-4" },
                         [
                           _c(
                             "v-toolbar",
@@ -49990,7 +50477,7 @@ var render = function() {
                                 "div",
                                 {
                                   staticClass:
-                                    "col-6 pt-0 pr-4 pb-0 pl-0 m-0 d-none"
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0 d-none"
                                 },
                                 [
                                   _c("v-file-input", {
@@ -50014,7 +50501,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-combobox", {
@@ -50041,7 +50529,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-combobox", {
@@ -50068,7 +50557,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50095,7 +50585,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-6 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-6 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50121,7 +50612,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50154,7 +50646,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50184,7 +50677,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -50211,7 +50705,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50242,7 +50737,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50269,7 +50765,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50296,7 +50793,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -50327,7 +50825,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-5 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-5 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -50359,7 +50858,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-3 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-3 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50385,7 +50885,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-5 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-5 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -50416,7 +50917,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50443,7 +50945,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-2 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-2 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50469,7 +50972,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-8 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-8 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50499,7 +51003,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-4 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-4 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-select", {
@@ -50530,7 +51035,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-12 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-textarea", {
@@ -50560,7 +51066,8 @@ var render = function() {
                               _c(
                                 "div",
                                 {
-                                  staticClass: "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                  staticClass:
+                                    "col-12 col-sm-12 col-md-12 col-lg-12 pt-0 pr-4 pb-0 pl-0 m-0"
                                 },
                                 [
                                   _c("v-text-field", {
@@ -50595,7 +51102,9 @@ var render = function() {
                               ]),
                               _vm._v(" "),
                               _c("v-toolbar-title", [
-                                _vm._v("Contact Information")
+                                _vm._v(
+                                  "Contact Information\n                        "
+                                )
                               ]),
                               _vm._v(" "),
                               _c("v-spacer"),
@@ -50697,7 +51206,9 @@ var render = function() {
                                 },
                                 [
                                   _c("v-icon", [_vm._v("mdi-content-save")]),
-                                  _vm._v(" Save")
+                                  _vm._v(
+                                    "\n                            Save\n                        "
+                                  )
                                 ],
                                 1
                               )
@@ -50729,143 +51240,160 @@ var render = function() {
                         },
                         [
                           _c(
-                            "v-card",
-                            { attrs: { width: "500px" } },
+                            "div",
+                            {
+                              staticClass: "d-flex justify-content-center px-4",
+                              staticStyle: { width: "95vw" }
+                            },
                             [
                               _c(
-                                "v-toolbar",
-                                { attrs: { dense: "", flat: "" } },
-                                [
-                                  _c("v-icon", { staticClass: "mr-1" }, [
-                                    _vm._v("mdi-mail")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-toolbar-title", [
-                                    _vm._v("Add Contact Info")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      staticClass: "m-0",
-                                      attrs: { icon: "" },
-                                      on: {
-                                        click: function($event) {
-                                          _vm.showAddContact = !_vm.showAddContact
-                                        }
-                                      }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-close")])],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4" },
+                                "v-card",
+                                {
+                                  staticClass:
+                                    "col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0",
+                                  attrs: { tile: "" }
+                                },
                                 [
                                   _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
+                                    "v-toolbar",
+                                    { attrs: { dense: "", flat: "" } },
                                     [
-                                      _c("v-select", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Type",
-                                          items: _vm.contactTypes,
-                                          rules: _vm.contactInfoTypeRules
-                                        },
-                                        model: {
-                                          value: _vm.addContactInfo.type,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.addContactInfo,
-                                              "type",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "addContactInfo.type"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
-                                    [
-                                      _c("v-text-field", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Info",
-                                          rules: _vm.contactInfoInfoRules
-                                        },
-                                        model: {
-                                          value: _vm.addContactInfo.info,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.addContactInfo,
-                                              "info",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "addContactInfo.info"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("v-divider", { staticClass: "m-0" }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { tile: "" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.saveContactInfo()
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("v-icon", [
-                                        _vm._v("mdi-content-save")
+                                      _c("v-icon", { staticClass: "mr-1" }, [
+                                        _vm._v("mdi-mail")
                                       ]),
-                                      _vm._v(" Save")
+                                      _vm._v(" "),
+                                      _c("v-toolbar-title", [
+                                        _vm._v("Add Contact Info")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "m-0",
+                                          attrs: { icon: "" },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.showAddContact = !_vm.showAddContact
+                                            }
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-close")])],
+                                        1
+                                      )
                                     ],
                                     1
                                   ),
                                   _vm._v(" "),
-                                  _c("v-spacer")
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-select", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Type",
+                                              items: _vm.contactTypes,
+                                              rules: _vm.contactInfoTypeRules
+                                            },
+                                            model: {
+                                              value: _vm.addContactInfo.type,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.addContactInfo,
+                                                  "type",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "addContactInfo.type"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Info",
+                                              rules: _vm.contactInfoInfoRules
+                                            },
+                                            model: {
+                                              value: _vm.addContactInfo.info,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.addContactInfo,
+                                                  "info",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "addContactInfo.info"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-divider", { staticClass: "m-0" }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: { tile: "" },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.saveContactInfo()
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-content-save")
+                                          ]),
+                                          _vm._v(
+                                            "\n                                Save\n                            "
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-spacer")
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
                             ],
                             1
                           )
-                        ],
-                        1
+                        ]
                       )
                     : _vm._e()
                 ],
@@ -50888,143 +51416,160 @@ var render = function() {
                         },
                         [
                           _c(
-                            "v-card",
-                            { attrs: { width: "500px" } },
+                            "div",
+                            {
+                              staticClass: "d-flex justify-content-center px-4",
+                              staticStyle: { width: "95vw" }
+                            },
                             [
                               _c(
-                                "v-toolbar",
-                                { attrs: { dense: "", flat: "" } },
-                                [
-                                  _c("v-icon", { staticClass: "mr-1" }, [
-                                    _vm._v("mdi-mail")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-toolbar-title", [
-                                    _vm._v("Edit Contact Info")
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      staticClass: "m-0",
-                                      attrs: { icon: "" },
-                                      on: {
-                                        click: function($event) {
-                                          _vm.showEditContact = !_vm.showEditContact
-                                        }
-                                      }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-close")])],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4" },
+                                "v-card",
+                                {
+                                  staticClass:
+                                    "col-12 col-sm-7 col-md-6 col-lg-5 col-xl-4 p-0",
+                                  attrs: { tile: "" }
+                                },
                                 [
                                   _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
+                                    "v-toolbar",
+                                    { attrs: { dense: "", flat: "" } },
                                     [
-                                      _c("v-select", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Type",
-                                          items: _vm.contactTypes,
-                                          rules: _vm.contactInfoTypeRules
-                                        },
-                                        model: {
-                                          value: _vm.editContactInfo.type,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.editContactInfo,
-                                              "type",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "editContactInfo.type"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
-                                    },
-                                    [
-                                      _c("v-text-field", {
-                                        attrs: {
-                                          filled: "",
-                                          dense: "",
-                                          label: "Info",
-                                          rules: _vm.contactInfoInfoRules
-                                        },
-                                        model: {
-                                          value: _vm.editContactInfo.info,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.editContactInfo,
-                                              "info",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "editContactInfo.info"
-                                        }
-                                      })
-                                    ],
-                                    1
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("v-divider", { staticClass: "m-0" }),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { tile: "" },
-                                      on: {
-                                        click: function($event) {
-                                          return _vm.saveEditContactInfo()
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _c("v-icon", [
-                                        _vm._v("mdi-content-save")
+                                      _c("v-icon", { staticClass: "mr-1" }, [
+                                        _vm._v("mdi-mail")
                                       ]),
-                                      _vm._v(" Save")
+                                      _vm._v(" "),
+                                      _c("v-toolbar-title", [
+                                        _vm._v("Edit Contact Info")
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "m-0",
+                                          attrs: { icon: "" },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.showEditContact = !_vm.showEditContact
+                                            }
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-close")])],
+                                        1
+                                      )
                                     ],
                                     1
                                   ),
                                   _vm._v(" "),
-                                  _c("v-spacer")
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "row m-0 pt-4 pr-0 pb-0 pl-4"
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-select", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Type",
+                                              items: _vm.contactTypes,
+                                              rules: _vm.contactInfoTypeRules
+                                            },
+                                            model: {
+                                              value: _vm.editContactInfo.type,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.editContactInfo,
+                                                  "type",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "editContactInfo.type"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "col-12 pt-0 pr-4 pb-0 pl-0 m-0"
+                                        },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              filled: "",
+                                              dense: "",
+                                              label: "Info",
+                                              rules: _vm.contactInfoInfoRules
+                                            },
+                                            model: {
+                                              value: _vm.editContactInfo.info,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.editContactInfo,
+                                                  "info",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "editContactInfo.info"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-divider", { staticClass: "m-0" }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c("v-spacer"),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: { tile: "" },
+                                          on: {
+                                            click: function($event) {
+                                              return _vm.saveEditContactInfo()
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-content-save")
+                                          ]),
+                                          _vm._v(
+                                            "\n                                Save\n                            "
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-spacer")
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
                             ],
                             1
                           )
-                        ],
-                        1
+                        ]
                       )
                     : _vm._e()
                 ],
@@ -51084,7 +51629,7 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "w-100 d-flex justify-content-center",
+        staticClass: "w-100 d-flex justify-content-center align-items-center",
         attrs: { id: "login-div" }
       },
       [
@@ -51097,7 +51642,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-6 pt-0 pr-7 pb-4 pl-0 d-flex justify-content-center"
+                    "col-12 col-md-4 col-lg-6 pt-0 pr-7 pb-4 pl-0 d-flex justify-content-center align-items-center"
                 },
                 [
                   _c("img", {
@@ -51116,12 +51661,15 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "col-6 pt-0 pr-4 pb-4 pl-0 d-flex justify-content-start"
+                    "col-12  col-md-8 col-lg-6 pt-0 pr-4 pb-4 pl-0 d-flex justify-content-center justify-content-lg-start"
                 },
                 [
                   _c(
                     "v-card",
-                    { staticClass: "col-7 p-0", attrs: { dark: "", tile: "" } },
+                    {
+                      staticClass: "col-lg-7 col-md-8 p-0",
+                      attrs: { dark: "", tile: "" }
+                    },
                     [
                       _c(
                         "v-toolbar",
@@ -51189,6 +51737,17 @@ var render = function() {
                         1
                       ),
                       _vm._v(" "),
+                      _c("a", { attrs: { href: "/terms-of-use" } }, [
+                        _c(
+                          "h6",
+                          {
+                            staticClass:
+                              "text-center mb-3 font-weight-light text-light"
+                          },
+                          [_vm._v("Terms of Use")]
+                        )
+                      ]),
+                      _vm._v(" "),
                       _c("v-divider", { staticClass: "m-0" }),
                       _vm._v(" "),
                       _c(
@@ -51209,9 +51768,13 @@ var render = function() {
                             },
                             [
                               _c("v-icon", { staticClass: "mr-1" }, [
-                                _vm._v("mdi-account-circle")
+                                _vm._v(
+                                  "mdi-account-circle\n                                "
+                                )
                               ]),
-                              _vm._v("Register")
+                              _vm._v(
+                                "\n                                Register\n                            "
+                              )
                             ],
                             1
                           ),
@@ -51393,32 +51956,8 @@ var render = function() {
                           )
                         ],
                         1
-                      ),
-                      _vm._v(" "),
-                      _c("v-spacer"),
-                      _vm._v(" "),
-                      _c(
-                        "h5",
-                        {
-                          staticClass:
-                            "m-0 red--text font-weight-normal crop-text"
-                        },
-                        [
-                          _vm._v(
-                            "\n                            " +
-                              _vm._s("$" + _vm.vehicle.price) +
-                              "\n                            "
-                          ),
-                          _c(
-                            "v-icon",
-                            { staticClass: "mr-1", attrs: { small: "" } },
-                            [_vm._v("mdi-tag")]
-                          )
-                        ],
-                        1
                       )
-                    ],
-                    1
+                    ]
                   ),
                   _vm._v(" "),
                   _c(
@@ -51596,6 +52135,43 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
+                  _c("v-divider", { staticClass: "mt-0" }),
+                  _vm._v(" "),
+                  _c(
+                    "h4",
+                    {
+                      staticClass: "font-weight-light px-4 pt-1 text-center m-0"
+                    },
+                    [_vm._v("Price")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex align-items-baseline justify-content-center px-4"
+                    },
+                    [
+                      _c("h4", { staticClass: " m-0" }, [_vm._v("GYD")]),
+                      _vm._v(" "),
+                      _c(
+                        "h1",
+                        { staticClass: "text-danger font-weight-bold  m-0" },
+                        [
+                          _vm._v(
+                            "$" +
+                              _vm._s(_vm.vehicle.price) +
+                              "\n                            "
+                          ),
+                          _c("v-icon", [_vm._v("mdi-tag")])
+                        ],
+                        1
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider", { staticClass: "mb-0" }),
+                  _vm._v(" "),
                   _c(
                     "div",
                     { staticClass: "px-1 py-4 px-sm-6 py-sm-6" },
@@ -51606,7 +52182,12 @@ var render = function() {
                           staticClass: "mb-3",
                           attrs: { type: "info", color: "blue-grey" }
                         },
-                        [_vm._v(_vm._s(_vm.vehicle.description))]
+                        [
+                          _vm._v(
+                            _vm._s(_vm.vehicle.description) +
+                              "\n                        "
+                          )
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
@@ -51614,13 +52195,13 @@ var render = function() {
                         { attrs: { dark: "" } },
                         [
                           _c("v-subheader", { staticClass: "p-0" }, [
-                            _vm._v("Advertisment")
+                            _vm._v("Advertisment\n                            ")
                           ])
                         ],
                         1
                       ),
                       _vm._v(" "),
-                      _c("v-img", { attrs: { src: "/images/girlad.jpg" } }),
+                      _c("v-img", { attrs: { src: "/images/scotia_ad.jpg" } }),
                       _vm._v(" "),
                       _c("v-simple-table", {
                         staticClass: "mt-3",
@@ -51645,11 +52226,11 @@ var render = function() {
                                     _vm._v(" "),
                                     _c("td", [
                                       _vm._v(
-                                        "\n                                            " +
+                                        "\n                                        " +
                                           _vm._s(
                                             _vm.vehicle.engine_displacement
                                           ) +
-                                          "\n                                        "
+                                          "\n                                    "
                                       )
                                     ])
                                   ]),
@@ -51673,9 +52254,9 @@ var render = function() {
                                     _vm._v(" "),
                                     _c("td", [
                                       _vm._v(
-                                        "\n                                            " +
+                                        "\n                                        " +
                                           _vm._s(_vm.vehicle.distance + "/km") +
-                                          "\n                                        "
+                                          "\n                                    "
                                       )
                                     ])
                                   ]),
@@ -51709,9 +52290,9 @@ var render = function() {
                                     _vm._v(" "),
                                     _c("td", [
                                       _vm._v(
-                                        "\n                                            " +
+                                        "\n                                        " +
                                           _vm._s(_vm.vehicle.driving_wheels) +
-                                          "\n                                        "
+                                          "\n                                    "
                                       )
                                     ])
                                   ]),
@@ -51810,13 +52391,13 @@ var render = function() {
                                   _c("tr", [
                                     _c("th", { staticClass: "text-left" }, [
                                       _vm._v(
-                                        "\n                                            Contact Type\n                                        "
+                                        "\n                                        Contact Type\n                                    "
                                       )
                                     ]),
                                     _vm._v(" "),
                                     _c("th", { staticClass: "text-left" }, [
                                       _vm._v(
-                                        "\n                                            Contact Info\n                                        "
+                                        "\n                                        Contact Info\n                                    "
                                       )
                                     ])
                                   ])
@@ -51923,7 +52504,6 @@ var render = function() {
       _c(
         "v-bottom-sheet",
         {
-          attrs: { persistent: "" },
           model: {
             value: _vm.show,
             callback: function($$v) {
@@ -51942,7 +52522,7 @@ var render = function() {
                 { staticClass: "mb-0", attrs: { type: "warning" } },
                 [
                   _vm._v(
-                    "\n                To access all the features of this site as a registered\n                user, please verifify your email address.\n            "
+                    "\n                To access all the features of this site as a registered\n                user, you must verifify your email address.\n            "
                   )
                 ]
               ),
@@ -52446,7 +53026,7 @@ var render = function() {
                     { attrs: { type: "submit", color: "blue", dark: "" } },
                     [
                       _c("v-icon", [_vm._v("mdi-filter")]),
-                      _vm._v("Filter\n                ")
+                      _vm._v("\n                    Filter\n                ")
                     ],
                     1
                   )
@@ -52504,8 +53084,11 @@ var render = function() {
               [
                 _c(
                   "v-btn",
-                  { staticClass: "text-none", attrs: { small: "", text: "" } },
-                  [_vm._v("Terms & Conditions")]
+                  {
+                    staticClass: "text-none text-decoration-none",
+                    attrs: { small: "", text: "", href: "/terms-of-use" }
+                  },
+                  [_vm._v("Terms of Use\n                ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -52514,19 +53097,16 @@ var render = function() {
                     staticClass: "text-none text-decoration-none",
                     attrs: { small: "", text: "", href: "/advertise" }
                   },
-                  [_vm._v("Advertise")]
+                  [_vm._v("Advertise\n                ")]
                 ),
                 _vm._v(" "),
                 _c(
                   "v-btn",
-                  { staticClass: "text-none", attrs: { small: "", text: "" } },
-                  [_vm._v("Business Oppertunities")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "v-btn",
-                  { staticClass: "text-none", attrs: { small: "", text: "" } },
-                  [_vm._v("List A Vehicle")]
+                  {
+                    staticClass: "text-none text-decoration-none",
+                    attrs: { small: "", text: "", href: "/register" }
+                  },
+                  [_vm._v("Sign Up\n                ")]
                 )
               ],
               1
@@ -52540,23 +53120,19 @@ var render = function() {
         _c("v-divider", { staticClass: "m-0", attrs: { light: "" } }),
         _vm._v(" "),
         _c(
-          "v-toolbar",
-          { attrs: { dense: "", flat: "", color: "grey darken-4" } },
+          "v-card",
+          {
+            staticClass: "d-flex justify-content-center",
+            attrs: { tile: "", elevation: "0", color: "grey darken-4" }
+          },
           [
-            _c("v-spacer"),
-            _vm._v(" "),
-            _c("v-subheader", [
+            _c("v-subheader", { staticClass: "text-center" }, [
               _vm._v(
                 "\n                © Copyright\n                " +
-                  _vm._s(
-                    new Date().getFullYear() +
-                      " — Carvidor | Built & Maintained By Kemo Smith"
-                  ) +
+                  _vm._s(new Date().getFullYear() + " — Carvidor") +
                   "\n            "
               )
-            ]),
-            _vm._v(" "),
-            _c("v-spacer")
+            ])
           ],
           1
         )
@@ -52594,17 +53170,172 @@ var render = function() {
         "v-carousel",
         {
           attrs: {
-            cycle: "",
+            "hide-delimiters": "",
             "show-arrows": false,
             height: "calc(75vh - 70px)"
           }
         },
-        _vm._l(_vm.items, function(item, i) {
-          return _c("v-carousel-item", {
-            key: i,
-            attrs: { src: "/images/" + item.src }
-          })
-        }),
+        [
+          _c("v-carousel-item", [
+            _c("div", { staticClass: "d-flex h-100 w-100 grey darken-4" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "col-12 col-sm-12 col-md-11 col-lg-10 p-0 mx-auto h-100"
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "row m-0 pt-0 pr-0 pb-4 pl-4 h-100" },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "col-12 pt-4 pr-4 pb-0 pl-0 h-100 " },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-100 h-100 d-flex align-items-center justify-content-center"
+                            },
+                            [
+                              _c(
+                                "div",
+                                [
+                                  _c(
+                                    "h1",
+                                    {
+                                      staticClass:
+                                        "font-weight-light text-center",
+                                      staticStyle: { "font-size": "5rem" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        List Your Car Now!\n                                    "
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-divider"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "d-flex justify-content-center"
+                                    },
+                                    [
+                                      _c(
+                                        "v-list",
+                                        { attrs: { color: "transparent" } },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { attrs: { dense: "" } },
+                                            [
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-check")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-list-item-title", [
+                                                _c(
+                                                  "h5",
+                                                  { staticClass: "m-0" },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                        It is totally easy.\n                                                    "
+                                                    )
+                                                  ]
+                                                )
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item",
+                                            { attrs: { dense: "" } },
+                                            [
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-check")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-list-item-title", [
+                                                _c(
+                                                  "h5",
+                                                  { staticClass: "m-0" },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                        It is totally\n                                                        "
+                                                    ),
+                                                    _c("strong", [
+                                                      _vm._v("FREE!")
+                                                    ])
+                                                  ]
+                                                )
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", [
+                                    _c(
+                                      "div",
+                                      { staticClass: "d-flex mt-4" },
+                                      [
+                                        _c(
+                                          "v-btn",
+                                          {
+                                            staticClass:
+                                              "text-decoration-none mx-auto",
+                                            attrs: {
+                                              color: "blue",
+                                              href: "/register"
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "Register To Get\n                                                Started."
+                                            )
+                                          ]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ])
+                                ],
+                                1
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
+          ])
+        ],
         1
       )
     ],
@@ -53158,75 +53889,30 @@ var render = function() {
           }
         },
         [
-          _c(
-            "v-toolbar",
-            { attrs: { dense: "", flat: "" } },
-            [
-              _c(
-                "h4",
-                {
-                  staticClass:
-                    "m-0 mr-4 text-decoration-none font-weight-light crop-text"
-                },
-                [
-                  _c("v-icon", { staticClass: "mr-1" }, [_vm._v("mdi-car")]),
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(
-                        _vm.vehicle.year +
-                          " " +
-                          _vm.vehicle.make +
-                          " " +
-                          _vm.vehicle.model
-                      ) +
-                      "\n        "
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "ShareNetwork",
-                {
-                  staticClass: "text-decoration-none",
-                  attrs: {
-                    network: "facebook",
-                    url: "http://kemocars.test/vehicle/" + _vm.vehicle.id,
-                    title:
-                      "Say hi to Vite! A brand new, extremely fast development setup for Vue.",
-                    description:
-                      "This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You.",
-                    quote: _vm.vehicle.description,
-                    hashtags: "Carvidor,BuyCars,SellCars"
-                  }
-                },
-                [
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "m-0",
-                      attrs: { small: "", icon: "" },
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                        }
-                      }
-                    },
-                    [
-                      _c("v-icon", { attrs: { color: "#4267B2" } }, [
-                        _vm._v("mdi-facebook")
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
+          _c("v-toolbar", { attrs: { dense: "", flat: "" } }, [
+            _c(
+              "h4",
+              {
+                staticClass:
+                  "m-0 mr-4 text-decoration-none font-weight-light crop-text"
+              },
+              [
+                _c("v-icon", { staticClass: "mr-1" }, [_vm._v("mdi-car")]),
+                _vm._v(
+                  "\n            " +
+                    _vm._s(
+                      _vm.vehicle.year +
+                        " " +
+                        _vm.vehicle.make +
+                        " " +
+                        _vm.vehicle.model
+                    ) +
+                    "\n        "
+                )
+              ],
+              1
+            )
+          ]),
           _vm._v(" "),
           _c("v-img", {
             staticClass: "grey lighten-4",
@@ -114636,8 +115322,8 @@ Vue.component("cs-edit-vehicle-overlay", __webpack_require__(/*! ./components/Cs
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://kemocars.test";
+axios.defaults.withCredentials = true; // axios.defaults.baseURL = "http://kemocars.test";
+
 var app = new Vue({
   store: store,
   router: router,

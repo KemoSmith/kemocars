@@ -17,7 +17,11 @@ Auth::routes(['verify' => true]);
 
 Route::get('/advertise', function () {
     return view('promo.advertise');
-})->name('home');
+})->name('advertise');
+
+Route::get('/terms-of-use', function () {
+    return view('promo.terms');
+})->name('terms');
 
 // Vehicle
 Route::get('/vehicle/create', 'VehicleController@create')->name('vehicle.create')->middleware('verified');

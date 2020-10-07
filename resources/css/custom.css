@@ -1,10 +1,16 @@
 .fontify {
-    font-family: "Exo", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .crop-text {
     white-space: nowrap;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 400px) {
+    .cs-d-none-xxsm {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -20,5 +26,17 @@
 
     .logo-size-sm {
         height: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .cs-d-none-md {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .cs-d-none-lg {
+        display: none;
     }
 }

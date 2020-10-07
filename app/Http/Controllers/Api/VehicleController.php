@@ -16,7 +16,7 @@ class VehicleController extends Controller
 {
     public function index()
     {
-        $vehicles = Vehicle::orderBy('created_at', 'desc')->paginate(6);
+        $vehicles = Vehicle::orderBy('id', 'desc')->paginate(6);
 
         $vehicles->each(function ($vehicle) {
             $vehicle->user;
@@ -129,36 +129,36 @@ class VehicleController extends Controller
     public function filter(VehicleFilterRequest $request)
     {
         $vehicles =
-            Vehicle::when($request->make, function ($query, $make) {
+            Vehicle::orderBy('id', 'desc')->when($request->make, function ($query, $make) {
                 $query->where('make', '=', $make);
             })->when($request->model, function ($query, $model) {
                 $query->where('model', '=', $model);
             })->when($request->min_year, function ($query, $min_year) {
-                $query->where('min_year', '=', $min_year);
+                $query->where('year', '>=', $min_year);
             })->when($request->max_year, function ($query, $max_year) {
-                $query->where('max_year', '=', $max_year);
+                $query->where('year', '<=', $max_year);
             })->when($request->steering, function ($query, $steering) {
                 $query->where('steering', '=', $steering);
             })->when($request->min_cc, function ($query, $min_cc) {
-                $query->where('min_cc', '=', $min_cc);
+                $query->where('engine_displacement', '>=', $min_cc);
             })->when($request->max_cc, function ($query, $max_cc) {
-                $query->where('max_cc', '=', $max_cc);
+                $query->where('engine_displacement', '<=', $max_cc);
             })->when($request->drive, function ($query, $drive) {
-                $query->where('drive', '=', $drive);
+                $query->where('driving_wheels', '=', $drive);
             })->when($request->transmission, function ($query, $transmission) {
                 $query->where('transmission', '=', $transmission);
             })->when($request->min_km, function ($query, $min_km) {
-                $query->where('min_km', '=', $min_km);
+                $query->where('distance', '>=', $min_km);
             })->when($request->max_km, function ($query, $max_km) {
-                $query->where('max_km', '=', $max_km);
+                $query->where('distance', '<=', $max_km);
             })->when($request->fuel, function ($query, $fuel) {
                 $query->where('fuel', '=', $fuel);
             })->when($request->condition, function ($query, $condition) {
                 $query->where('condition', '=', $condition);
             })->when($request->min_price, function ($query, $min_price) {
-                $query->where('min_price', '=', $min_price);
+                $query->where('price', '>=', $min_price);
             })->when($request->max_price, function ($query, $max_price) {
-                $query->where('max_price', '=', $max_price);
+                $query->where('price', '<=', $max_price);
             })->paginate(6);
 
         $vehicles->each(function ($vehicle) {
@@ -184,7 +184,7 @@ class VehicleController extends Controller
             ->orWhere(DB::raw('concat(model," ",description," ",year," ",make)'), 'like', "%{$searchTerm}%")
             ->orWhere(DB::raw('concat(description," ",model," ",year," ",make)'), 'like', "%{$searchTerm}%")
             ->orWhere(DB::raw('concat(description," ",model," ",year," ",make)'), 'like', "%{$searchTerm}%")
-            ->orderBy('created_at', 'desc')->paginate(6);
+            ->orderBy('id', 'desc')->paginate(6);
 
         $vehicles->each(function ($vehicle) {
             $vehicle->user;
@@ -202,7 +202,7 @@ class VehicleController extends Controller
 
     public function user_vehicles(User $user)
     {
-        $vehicles = $user->vehicle()->orderBy('created_at', 'desc')->paginate(6);
+        $vehicles = $user->vehicle()->orderBy('id', 'desc')->paginate(6);
 
         $vehicles->each(function ($vehicle) {
             $vehicle->user;

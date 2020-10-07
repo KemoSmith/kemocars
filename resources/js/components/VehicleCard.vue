@@ -14,20 +14,6 @@
                 <v-icon class="mr-1">mdi-car</v-icon>
                 {{ `${vehicle.year} ${vehicle.make} ${vehicle.model}` }}
             </h4>
-            <v-spacer></v-spacer>
-            <ShareNetwork
-                network="facebook"
-                :url="`http://kemocars.test/vehicle/${vehicle.id}`"
-                title="Say hi to Vite! A brand new, extremely fast development setup for Vue."
-                description="This week, I’d like to introduce you to 'Vite', which means 'Fast'. It’s a brand new development setup created by Evan You."
-                :quote="vehicle.description"
-                hashtags="Carvidor,BuyCars,SellCars"
-                class="text-decoration-none"
-            >
-                <v-btn small icon v-on:click.prevent="" class="m-0">
-                    <v-icon color="#4267B2">mdi-facebook</v-icon>
-                </v-btn>
-            </ShareNetwork>
         </v-toolbar>
         <v-img
             :aspect-ratio="3 / 2"
@@ -59,11 +45,11 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import {mapGetters} from "vuex";
+
 export default {
-    props: { vehicle: Object },
+    props: {vehicle: Object},
     mounted() {
-        console.log(this.vehicle, "vehiclex");
     },
     computed: {
         ...mapGetters(["isDarkMode"])

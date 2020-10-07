@@ -9,10 +9,10 @@
             class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 pt-0 pr-4 pb-4 pl-0"
         >
             <a :href="`/vehicle/${vehicle.id}`" class="text-decoration-none">
-                    <vehicle-card
-                        :id="`vehicle-card-${i}`"
-                        :vehicle="vehicle"
-                    ></vehicle-card>
+                <vehicle-card
+                    :id="`vehicle-card-${i}`"
+                    :vehicle="vehicle"
+                ></vehicle-card>
             </a>
         </div>
     </div>

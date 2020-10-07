@@ -25,7 +25,7 @@ class VehicleSeeder extends Seeder
         $location = ['Yokohoma Japan', 'Linden', 'Georgetown', 'Berbice', 'ECD'];
         $condition = ['New', 'Foreign Used', 'Used', 'Refurbished'];
 
-        while ($posted < 100) {
+        while ($posted < 1000) {
 
             $user = User::find(rand(1, 4));
 
