@@ -26,14 +26,14 @@
                     <v-btn class="cs-d-none-xsm" icon @click="togglePostVehicle()"
                         ><v-icon>mdi-twitter</v-icon></v-btn
                     >
-                    <v-toolbar-items class="cs-d-none-sm">
-                        <v-btn text class="text-none text-decoration-none cs-d-none-xsm" href="/advertise">
-                            <h5 class="m-0 font-weight-normal">
-                                <v-icon>mdi-handshake</v-icon>
-                                Advertise
-                            </h5>
-                        </v-btn>
-                    </v-toolbar-items>
+<!--                    <v-toolbar-items class="cs-d-none-sm">-->
+<!--                        <v-btn text class="text-none text-decoration-none cs-d-none-xsm" href="/advertise">-->
+<!--                            <h5 class="m-0 font-weight-normal">-->
+<!--                                <v-icon>mdi-handshake</v-icon>-->
+<!--                                Advertise-->
+<!--                            </h5>-->
+<!--                        </v-btn>-->
+<!--                    </v-toolbar-items>-->
                     <v-spacer></v-spacer>
                     <v-btn v-if="LoggedIn" icon @click="togglePostVehicle()"
                         ><v-icon>mdi-plus</v-icon></v-btn

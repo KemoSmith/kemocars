@@ -181,12 +181,34 @@ class VehicleController extends Controller
 
         $searchTerm = request()->search_term;
 
-        $vehicles = Vehicle::where(DB::raw('concat(year," ",make," ",model," ",description)'), 'like', "%{$searchTerm}%")
-            ->orWhere(DB::raw('concat(make," ",model," ",description," ",year)'), 'like', "%{$searchTerm}%")
-            ->orWhere(DB::raw('concat(model," ",description," ",year," ",make)'), 'like', "%{$searchTerm}%")
-            ->orWhere(DB::raw('concat(description," ",model," ",year," ",make)'), 'like', "%{$searchTerm}%")
-            ->orWhere(DB::raw('concat(description," ",model," ",year," ",make)'), 'like', "%{$searchTerm}%")
-            ->orderBy('id', 'desc')->paginate(6);
+        $searches = [];
+
+        foreach (explode(' ', strtolower($searchTerm)) as $word) {
+            array_push($searches,
+                [
+                    'column' => 'make',
+                    'operator' => 'ilike',
+                    'searchWord' => $word,
+                ]);
+            array_push($searches,
+                [
+                    'column' => 'model',
+                    'operator' => 'ilike',
+                    'searchWord' => $word,
+                ]);
+            array_push($searches,
+                [
+                    'column' => 'year',
+                    'operator' => 'ilike',
+                    'searchWord' => $word,
+                ]);
+        }
+
+        $vehicles = Vehicle::where(function ($query) use ($searches) {
+            foreach ($searches as $search) {
+                $query->orWhere($search['column'], $search['operator'], $search['searchWord']);
+            }
+        })->orderBy('id', 'desc')->paginate(6);
 
         $vehicles->each(function ($vehicle) {
             $vehicle->user;

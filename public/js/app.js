@@ -5824,6 +5824,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5987,6 +5989,121 @@ __webpack_require__.r(__webpack_exports__);
       imageObjects: []
     };
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MessageUi.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MessageUi.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "MessageUi"
 });
 
 /***/ }),
@@ -47837,35 +47954,6 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "v-toolbar-items",
-                    { staticClass: "cs-d-none-sm" },
-                    [
-                      _c(
-                        "v-btn",
-                        {
-                          staticClass:
-                            "text-none text-decoration-none cs-d-none-xsm",
-                          attrs: { text: "", href: "/advertise" }
-                        },
-                        [
-                          _c(
-                            "h5",
-                            { staticClass: "m-0 font-weight-normal" },
-                            [
-                              _c("v-icon", [_vm._v("mdi-handshake")]),
-                              _vm._v(
-                                "\n                            Advertise\n                        "
-                              )
-                            ],
-                            1
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
                   _c("v-spacer"),
                   _vm._v(" "),
                   _vm.LoggedIn
@@ -48022,7 +48110,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                    My Account\n                                "
+                                          "\n                                        My Account\n                                    "
                                         )
                                       ])
                                     ],
@@ -48040,7 +48128,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                    Login\n                                "
+                                          "\n                                        Login\n                                    "
                                         )
                                       ])
                                     ],
@@ -48058,7 +48146,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                    Register\n                                "
+                                          "\n                                        Register\n                                    "
                                         )
                                       ])
                                     ],
@@ -48080,7 +48168,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                    Logout\n                                "
+                                          "\n                                        Logout\n                                    "
                                         )
                                       ])
                                     ],
@@ -53088,16 +53176,7 @@ var render = function() {
                     staticClass: "text-none text-decoration-none",
                     attrs: { small: "", text: "", href: "/terms-of-use" }
                   },
-                  [_vm._v("Terms of Use\n                ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "v-btn",
-                  {
-                    staticClass: "text-none text-decoration-none",
-                    attrs: { small: "", text: "", href: "/advertise" }
-                  },
-                  [_vm._v("Advertise\n                ")]
+                  [_vm._v("Terms of Use\n                    ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -53106,7 +53185,7 @@ var render = function() {
                     staticClass: "text-none text-decoration-none",
                     attrs: { small: "", text: "", href: "/register" }
                   },
-                  [_vm._v("Sign Up\n                ")]
+                  [_vm._v("Sign Up\n                    ")]
                 )
               ],
               1
@@ -53120,19 +53199,20 @@ var render = function() {
         _c("v-divider", { staticClass: "m-0", attrs: { light: "" } }),
         _vm._v(" "),
         _c(
-          "v-card",
-          {
-            staticClass: "d-flex justify-content-center",
-            attrs: { tile: "", elevation: "0", color: "grey darken-4" }
-          },
+          "v-toolbar",
+          { attrs: { flat: "", color: "grey darken-4", dense: "" } },
           [
+            _c("v-spacer"),
+            _vm._v(" "),
             _c("v-subheader", { staticClass: "text-center" }, [
               _vm._v(
-                "\n                © Copyright\n                " +
+                "\n                    © Copyright\n                    " +
                   _vm._s(new Date().getFullYear() + " — Carvidor") +
-                  "\n            "
+                  "\n                "
               )
-            ])
+            ]),
+            _vm._v(" "),
+            _c("v-spacer")
           ],
           1
         )
@@ -53412,6 +53492,359 @@ var render = function() {
     ],
     1
   )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row m-0 pt-0 pr-4 pb-4 pl-0" }, [
+    _c(
+      "div",
+      { staticClass: "col-3 pt-4 pr-0 pb-0 pl-4" },
+      [
+        _c(
+          "v-card",
+          { attrs: { flat: "" } },
+          [
+            _c(
+              "v-toolbar",
+              {
+                attrs: { flat: "", color: "grey darken-4", dark: "", dense: "" }
+              },
+              [
+                _c(
+                  "v-toolbar-title",
+                  [
+                    _c("v-icon", [_vm._v("mdi-contacts")]),
+                    _vm._v("\n                    Contacts\n                ")
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "col-9 pt-4 pr-0 pb-0 pl-4" },
+      [
+        _c(
+          "v-card",
+          {
+            staticStyle: { height: "calc(100vh - 70px - 48px - 48px - 32px)" },
+            attrs: { flat: "" }
+          },
+          [
+            _c(
+              "v-toolbar",
+              {
+                attrs: { flat: "", color: "grey darken-4", dark: "", dense: "" }
+              },
+              [
+                _c(
+                  "v-toolbar-title",
+                  [
+                    _c("v-icon", [_vm._v("mdi-message")]),
+                    _vm._v("\n                    Messages\n                ")
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("v-spacer"),
+                _vm._v(" "),
+                _c("v-subheader", [_vm._v("John Doe")]),
+                _vm._v(" "),
+                _c("v-avatar", { attrs: { color: "grey", size: "40" } }, [
+                  _vm._v("JD")
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "d-flex flex-column justify-content-end",
+                staticStyle: { height: "calc(100% - 48px)" }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "pt-4 pl-4",
+                    staticStyle: {
+                      height: "calc( 100% - 64px )",
+                      "overflow-y": "scroll"
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "pr-4 pb-4 d-flex" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "w-75",
+                            attrs: { color: "blue", flat: "", dark: "" }
+                          },
+                          [
+                            _c(
+                              "v-subheader",
+                              { staticClass: "text-white pb-0 mb-0" },
+                              [
+                                _vm._v(
+                                  "\n                                Can you tell me if your price is negotiable??\n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "px-4 pb-2" }, [
+                              _c("small", [_vm._v("Dec-10-2020 02:54pm")])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "pr-4 pb-4 d-flex" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "ml-auto w-75",
+                            attrs: {
+                              color: "blue lighten-5",
+                              flat: "",
+                              light: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "v-subheader",
+                              { staticClass: "text-dark pb-0 mb-0" },
+                              [
+                                _vm._v(
+                                  "\n                                Yes it is.\n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "px-4 pb-2" }, [
+                              _c("small", [_vm._v("Dec-10-2020 02:55pm")])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "pr-4 pb-4 d-flex" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "ml-auto w-75",
+                            attrs: {
+                              color: "blue lighten-5",
+                              flat: "",
+                              light: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "v-subheader",
+                              { staticClass: "text-dark pb-0 mb-0" },
+                              [
+                                _vm._v(
+                                  "\n                                What price were you thinking of?.\n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "px-4 pb-2" }, [
+                              _c("small", [_vm._v("Dec-10-2020 02:55pm")])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "pr-4 pb-4 d-flex" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "w-75",
+                            attrs: { color: "blue", flat: "", dark: "" }
+                          },
+                          [
+                            _c(
+                              "v-subheader",
+                              { staticClass: "text-white pb-0 mb-0" },
+                              [
+                                _vm._v(
+                                  "\n                                How about $20M?\n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "px-4 pb-2" }, [
+                              _c("small", [_vm._v("Dec-10-2020 02:54pm")])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "pr-4 pb-4 d-flex" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "ml-auto w-75",
+                            attrs: {
+                              color: "blue lighten-5",
+                              flat: "",
+                              light: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "v-subheader",
+                              { staticClass: "text-dark pb-0 mb-0" },
+                              [
+                                _vm._v(
+                                  "\n                                That would not be feasible enough for me.\n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "px-4 pb-2" }, [
+                              _c("small", [_vm._v("Dec-10-2020 02:55pm")])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "pr-4 pb-4 d-flex" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            staticClass: "w-75",
+                            attrs: { color: "blue", flat: "", dark: "" }
+                          },
+                          [
+                            _c(
+                              "v-subheader",
+                              { staticClass: "text-white pb-0 mb-0" },
+                              [
+                                _vm._v(
+                                  "\n                                How about $20.5M?\n                            "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "px-4 pb-2" }, [
+                              _c("small", [_vm._v("Dec-10-2020 02:54pm")])
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("v-divider", { staticClass: "m-0" }),
+                _vm._v(" "),
+                _c(
+                  "v-toolbar",
+                  { attrs: { flat: "", color: "transparent" } },
+                  [
+                    _c("v-text-field", {
+                      staticClass: "mt-7",
+                      attrs: {
+                        "prepend-icon": "mdi-message-text",
+                        filled: "",
+                        label: "Message",
+                        "full-width": ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "v-btn",
+                      {
+                        staticClass: "ml-4",
+                        attrs: {
+                          fab: "",
+                          elevation: "0",
+                          color: "blue",
+                          dark: ""
+                        }
+                      },
+                      [_c("v-icon", [_vm._v("mdi-send")])],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -115279,6 +115712,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
   mode: "history"
 });
+var vuetify = new vuetify__WEBPACK_IMPORTED_MODULE_0___default.a({});
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -115316,6 +115750,7 @@ Vue.component("cs-search-overlay", __webpack_require__(/*! ./components/CsSearch
 Vue.component("cs-filter-overlay", __webpack_require__(/*! ./components/CsFilterOverlay.vue */ "./resources/js/components/CsFilterOverlay.vue")["default"]);
 Vue.component("cs-post-vehicle-overlay", __webpack_require__(/*! ./components/CsPostVehicleOverlay.vue */ "./resources/js/components/CsPostVehicleOverlay.vue")["default"]);
 Vue.component("cs-edit-vehicle-overlay", __webpack_require__(/*! ./components/CsEditVehicleOverlay.vue */ "./resources/js/components/CsEditVehicleOverlay.vue")["default"]);
+Vue.component("cs-message-ui", __webpack_require__(/*! ./components/MessageUi.vue */ "./resources/js/components/MessageUi.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -115328,7 +115763,7 @@ var app = new Vue({
   store: store,
   router: router,
   el: "#app",
-  vuetify: new vuetify__WEBPACK_IMPORTED_MODULE_0___default.a()
+  vuetify: vuetify
 });
 
 /***/ }),
@@ -116777,6 +117212,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_template_id_3fba29fe___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ImageSlider_vue_vue_type_template_id_3fba29fe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/MessageUi.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/MessageUi.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MessageUi_vue_vue_type_template_id_58a64cc0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true& */ "./resources/js/components/MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true&");
+/* harmony import */ var _MessageUi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MessageUi.vue?vue&type=script&lang=js& */ "./resources/js/components/MessageUi.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MessageUi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MessageUi_vue_vue_type_template_id_58a64cc0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MessageUi_vue_vue_type_template_id_58a64cc0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "58a64cc0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/MessageUi.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/MessageUi.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/MessageUi.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MessageUi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MessageUi.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MessageUi.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MessageUi_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true& ***!
+  \******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MessageUi_vue_vue_type_template_id_58a64cc0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MessageUi.vue?vue&type=template&id=58a64cc0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MessageUi_vue_vue_type_template_id_58a64cc0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MessageUi_vue_vue_type_template_id_58a64cc0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

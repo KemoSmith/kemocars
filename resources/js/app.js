@@ -10,8 +10,9 @@ import VueRouter from "vue-router";
 import VehicleFrom from "./store/modules/vehicleForm";
 import AppMod from "./store/modules/appMod";
 import VueSocialSharing from "vue-social-sharing";
-import { ValidationProvider } from "vee-validate";
+import {ValidationProvider} from "vee-validate";
 import "./validation";
+
 require("./bootstrap");
 
 window.Vue = require("vue");
@@ -31,6 +32,8 @@ const store = new Vuex.Store({
 const router = new VueRouter({
     mode: "history"
 });
+
+const vuetify = new Vuetify({})
 
 /**
  * The following block of code may be used to automatically register your
@@ -118,6 +121,10 @@ Vue.component(
     "cs-edit-vehicle-overlay",
     require("./components/CsEditVehicleOverlay.vue").default
 );
+Vue.component(
+    "cs-message-ui",
+    require("./components/MessageUi.vue").default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -132,5 +139,5 @@ const app = new Vue({
     store,
     router,
     el: "#app",
-    vuetify: new Vuetify()
+    vuetify
 });

@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
-Route::get('/advertise', function () {
-    return view('promo.advertise');
-})->name('advertise');
+//Route::get('/advertise', function () {
+//    return view('promo.advertise');
+//})->name('advertise');
 
 Route::get('/terms-of-use', function () {
     return view('promo.terms');
@@ -37,3 +37,8 @@ Route::delete('/vehicle/{vehicle}', 'VehicleController@destroy')->name('vehicle.
 
 // User
 Route::patch('/user/{user}', 'UserController@update')->name('user.update')->middleware(['verified','auth:sanctum']);
+
+//Messages
+Route::get('/messages', 'MessageController@messageUi')->name('message.ui');
+
+// Admin
