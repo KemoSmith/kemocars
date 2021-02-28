@@ -133,7 +133,7 @@ Vue.component(
  */
 
 axios.defaults.withCredentials = true;
-// axios.defaults.baseURL = "http://kemocars.test";
+// axios.defaults.baseURL = "http://69.164.203.46/";
 
 const app = new Vue({
     store,
