@@ -45,7 +45,7 @@ class VehicleStoreRequest extends FormRequest
             "condition" => ['required', Rule::in(['New', 'Foreign Used', 'Used', 'Refurbished'])],
             "description" => 'nullable|string|max:500',
             "price" => 'required|numeric|max:1000000000|min:20000',
-            "images" => 'array|max:30',
+            "images" => 'array|max:19',
             "images.*" => 'required|image',
             "show_ci" => 'array',
             "show_ci.*" => 'integer|exists:contact_infos,id'

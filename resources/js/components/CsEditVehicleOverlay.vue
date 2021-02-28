@@ -37,9 +37,9 @@
                             >
                             <v-spacer></v-spacer>
                             <v-subheader
-                                :class="imagesAmount > 30 ? 'text-danger' : ''"
+                                :class="imagesAmount > 19 ? 'text-danger' : ''"
                                 >{{
-                                    `Max 30 Images. ${imagesAmount} Selected.`
+                                    `Max 19 Images. ${imagesAmount} Selected.`
                                 }}</v-subheader
                             >
                             <v-btn class="m-0" icon @click="launchImageInput()"

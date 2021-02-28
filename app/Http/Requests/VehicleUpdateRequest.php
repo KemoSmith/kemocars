@@ -56,7 +56,7 @@ class VehicleUpdateRequest extends FormRequest
     private function imagesRule()
     {
         $vehicle = request()->route('vehicle');
-        $allowedAmount = 30 - count($vehicle->image);
+        $allowedAmount = 19 - count($vehicle->image);
         return "array|max:$allowedAmount";
     }
 }
