@@ -19,21 +19,30 @@
                         class="cs-d-none-md"
                     />
                     <h6 class="m-0 ml-1 cs-d-none-md">Guyana</h6>
-                    <v-divider class="my-0 mx-5 cs-d-none-md" dark vertical></v-divider>
-                    <v-btn class="cs-d-none-xsm" icon @click="togglePostVehicle()"
+                    <v-divider
+                        class="my-0 mx-5 cs-d-none-md"
+                        dark
+                        vertical
+                    ></v-divider>
+                    <v-btn
+                        class="cs-d-none-xsm"
+                        icon
+                        @click="togglePostVehicle()"
+                        href="https://www.facebook.com/592cars/"
+                        target="_blank"
                         ><v-icon>mdi-facebook</v-icon></v-btn
                     >
-                    <v-btn class="cs-d-none-xsm" icon @click="togglePostVehicle()"
+                    <!-- <v-btn class="cs-d-none-xsm" icon @click="togglePostVehicle()"
                         ><v-icon>mdi-twitter</v-icon></v-btn
-                    >
-<!--                    <v-toolbar-items class="cs-d-none-sm">-->
-<!--                        <v-btn text class="text-none text-decoration-none cs-d-none-xsm" href="/advertise">-->
-<!--                            <h5 class="m-0 font-weight-normal">-->
-<!--                                <v-icon>mdi-handshake</v-icon>-->
-<!--                                Advertise-->
-<!--                            </h5>-->
-<!--                        </v-btn>-->
-<!--                    </v-toolbar-items>-->
+                    > -->
+                    <!--                    <v-toolbar-items class="cs-d-none-sm">-->
+                    <!--                        <v-btn text class="text-none text-decoration-none cs-d-none-xsm" href="/advertise">-->
+                    <!--                            <h5 class="m-0 font-weight-normal">-->
+                    <!--                                <v-icon>mdi-handshake</v-icon>-->
+                    <!--                                Advertise-->
+                    <!--                            </h5>-->
+                    <!--                        </v-btn>-->
+                    <!--                    </v-toolbar-items>-->
                     <v-spacer></v-spacer>
                     <v-btn v-if="LoggedIn" icon @click="togglePostVehicle()"
                         ><v-icon>mdi-plus</v-icon></v-btn

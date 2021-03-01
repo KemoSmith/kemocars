@@ -2573,6 +2573,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "csappbar",
@@ -47972,7 +47981,11 @@ var render = function() {
                     "v-btn",
                     {
                       staticClass: "cs-d-none-xsm",
-                      attrs: { icon: "" },
+                      attrs: {
+                        icon: "",
+                        href: "https://www.facebook.com/592cars/",
+                        target: "_blank"
+                      },
                       on: {
                         click: function($event) {
                           return _vm.togglePostVehicle()
@@ -47980,21 +47993,6 @@ var render = function() {
                       }
                     },
                     [_c("v-icon", [_vm._v("mdi-facebook")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "cs-d-none-xsm",
-                      attrs: { icon: "" },
-                      on: {
-                        click: function($event) {
-                          return _vm.togglePostVehicle()
-                        }
-                      }
-                    },
-                    [_c("v-icon", [_vm._v("mdi-twitter")])],
                     1
                   ),
                   _vm._v(" "),
@@ -48154,7 +48152,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                        My Account\n                                    "
+                                          "\n                                    My Account\n                                "
                                         )
                                       ])
                                     ],
@@ -48172,7 +48170,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                        Login\n                                    "
+                                          "\n                                    Login\n                                "
                                         )
                                       ])
                                     ],
@@ -48190,7 +48188,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                        Register\n                                    "
+                                          "\n                                    Register\n                                "
                                         )
                                       ])
                                     ],
@@ -48212,7 +48210,7 @@ var render = function() {
                                     [
                                       _c("v-list-item-title", [
                                         _vm._v(
-                                          "\n                                        Logout\n                                    "
+                                          "\n                                    Logout\n                                "
                                         )
                                       ])
                                     ],
