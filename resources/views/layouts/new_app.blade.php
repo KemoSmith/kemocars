@@ -29,6 +29,9 @@
 
         <!-- adsense -->
         <script data-ad-client="ca-pub-6782192291655689" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <!-- reCapacha -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     <body>
         <v-app id="app" class="bg-light fontify">
