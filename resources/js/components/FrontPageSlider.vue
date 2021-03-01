@@ -5,10 +5,9 @@
             :show-arrows="false"
             height="calc(75vh - 70px)"
         >
-            <v-carousel-item>
+            <v-carousel-item src="/images/allion_ad.jpg">
                 <div
-                    class="d-flex h-100 w-100 grey darken-4"
-
+                    class="d-flex h-100 w-100 transparency-x"
                 >
                     <div
                         class="col-12 col-sm-12 col-md-11 col-lg-10 p-0 mx-auto h-100"
@@ -96,4 +95,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.transparency-x {
+    background-color: rgba(22, 22, 22, 0.9);
+}
+</style>
