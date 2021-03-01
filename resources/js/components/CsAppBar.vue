@@ -6,7 +6,7 @@
                 <v-toolbar dark color="grey darken-4" height="70px" flat>
                     <a href="/">
                         <img
-                            src="/images/carvidor.svg"
+                            src="/images/rovr.png"
                             alt="logo"
                             height="40px"
                         />
