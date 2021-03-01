@@ -53,7 +53,7 @@
                     <v-btn icon @click="toggleSearch()"
                         ><v-icon>mdi-magnify</v-icon></v-btn
                     >
-                    <v-btn class="cs-d-none-xxsm" icon @click="toggleDarkMode()"
+                    <v-btn class="cs-d-none-xsm" icon @click="toggleDarkMode()"
                         ><v-icon>mdi-theme-light-dark</v-icon></v-btn
                     >
                     <v-menu top :close-on-content-click="closeOnContentClick">
