@@ -34,7 +34,7 @@
                     &copy; Copyright
                     {{
                         new Date().getFullYear() +
-                        " — Carvidor"
+                        " — Kemo Smith"
                     }}
                 </v-subheader>
                 <v-spacer></v-spacer>

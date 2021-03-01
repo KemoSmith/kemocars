@@ -53254,7 +53254,7 @@ var render = function() {
             _c("v-subheader", { staticClass: "text-center" }, [
               _vm._v(
                 "\n                    © Copyright\n                    " +
-                  _vm._s(new Date().getFullYear() + " — Carvidor") +
+                  _vm._s(new Date().getFullYear() + " — Kemo Smith") +
                   "\n                "
               )
             ]),
