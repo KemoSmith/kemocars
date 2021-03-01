@@ -9,7 +9,7 @@
         </div>
         <v-img
             class="sticky-top"
-            src="https://i.pinimg.com/originals/64/d0/2b/64d02baf5ab0ca725d493dee762dc0b7.jpg"
+            src="/images/ad_placeholder.png"
         ></v-img>
     </v-card>
 </template>

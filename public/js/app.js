@@ -46777,10 +46777,7 @@ var render = function() {
       _vm._v(" "),
       _c("v-img", {
         staticClass: "sticky-top",
-        attrs: {
-          src:
-            "https://i.pinimg.com/originals/64/d0/2b/64d02baf5ab0ca725d493dee762dc0b7.jpg"
-        }
+        attrs: { src: "/images/ad_placeholder.png" }
       })
     ],
     1
@@ -52336,7 +52333,9 @@ var render = function() {
                         1
                       ),
                       _vm._v(" "),
-                      _c("v-img", { attrs: { src: "/images/scotia_ad.jpg" } }),
+                      _c("v-img", {
+                        attrs: { src: "/images/ad_placeholder.png" }
+                      }),
                       _vm._v(" "),
                       _c("v-simple-table", {
                         staticClass: "mt-3",

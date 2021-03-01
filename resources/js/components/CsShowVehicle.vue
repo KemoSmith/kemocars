@@ -138,7 +138,7 @@
                                 </v-subheader
                                 >
                             </v-system-bar>
-                            <v-img src="/images/scotia_ad.jpg"></v-img>
+                            <v-img src="/images/ad_placeholder.png"></v-img>
                             <v-simple-table class="mt-3">
                                 <template v-slot:default>
                                     <tbody>
